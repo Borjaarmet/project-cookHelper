@@ -3,9 +3,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose = require('mongoose')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+mongoose.connect('mongodb://localhost:27017/project-CookHelper', {useNewUrlParser: true, useUnifiedTopology: true})
+.then(()=> {
+  console.log("connected to DB")
+})
+.catch((error)=>{
+  console.log('error', error)
+})
 
 var app = express();
 
