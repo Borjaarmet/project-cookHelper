@@ -26,8 +26,8 @@ router.get('/users/login',(req, res) => {
   res.render('users/login')
 });
 
-router.post('/users/login',(req,res,next) => {
-  const {email, password} = req.body;
+router.post('/users/login',(req,res) => {
+  const {email} = req.body;
   User.findOne({email})
   .then((user) => {
     console.log('user founded: ',user)
