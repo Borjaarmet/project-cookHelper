@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -5,10 +7,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
-const users = require('./routes/users');
-const index = require('./routes/index');
 
-
+// poner en variable de entorno
 mongoose.connect('mongodb://localhost:27017/project-CookHelper', 
 {
   useCreateIndex: true,
@@ -24,6 +24,9 @@ mongoose.connect('mongodb://localhost:27017/project-CookHelper',
 
 const app = express();
 
+// use session here:
+require('./configs/session.config')(app);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -35,12 +38,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+const users = require('./routes/users');
+const recipes = require('./routes/recipes');
+const authRouter = require('./routes/auth.routes');
+
 
 app.use('/', users)
-
-
-
-app.use('/', index);
+app.use('/', recipes);
+app.use('/',authRouter)
 
 
 

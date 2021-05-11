@@ -1,8 +1,47 @@
+*{
+  margin: auto;
+}
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
+  font: 14px;
 }
 
 a {
   color: #00B7FF;
+}
+
+/*   HOME PAGE   */
+.nav-bar{
+  display: flex;
+  background-color: steelblue;
+  padding:40px;
+}
+.btn-nav{
+  padding:20px;
+}
+.container{
+  display: flex;
+  background-image: url('/images/background-cook4.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1600px;
+  width: 100vw;
+}
+.img-logo{
+  width: 100%;
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  font-size: 60px;
+}
+
+.subtittle{
+  text-align: center;
+  color: wheat;
+}
+.error{
+  background-color: tomato;
+  padding: 30px;
 }
