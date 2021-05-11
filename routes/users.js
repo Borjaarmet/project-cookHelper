@@ -26,6 +26,19 @@ router.get('/users/login',(req, res) => {
   res.render('users/login')
 });
 
+router.post('/users/login',(req,res,next) => {
+  const {email, password} = req.body;
+  User.findOne({email})
+  .then((user) => {
+    console.log('user founded: ',user)
+    res.redirect('/users/welcome')
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+
+})
+
 router.get('/users/welcome',(req, res) => {
   res.render('users/welcome')
 });
