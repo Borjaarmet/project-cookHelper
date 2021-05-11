@@ -1,4 +1,5 @@
 const express = require('express');
+const User = require('../models/user-model');
 
 const router = express.Router();
 
@@ -7,6 +8,17 @@ const router = express.Router();
 router.get('/users/signup',(req, res) => {
   res.render('users/signup')
 });
+
+router.post('/users/signup', (req, res, next) => {
+  const { userName, email, password } = req.body;
+
+ User.create({ userName, email, password })
+  console.log(req.body)
+    .then(() => res.redirect('/users/welcome'))
+    .catch(error => {
+      next(error)
+    });
+})
 
 router.get('/users/login',(req, res) => {
   res.render('users/login')

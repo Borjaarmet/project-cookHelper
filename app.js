@@ -1,22 +1,28 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-const mongoose = require('mongoose')
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const mongoose = require('mongoose');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const users = require('./routes/users');
+const index = require('./routes/index');
 
-mongoose.connect('mongodb://localhost:27017/project-CookHelper', {useNewUrlParser: true, useUnifiedTopology: true})
-.then(()=> {
-  console.log("connected to DB")
+
+mongoose.connect('mongodb://localhost:27017/project-CookHelper', 
+{
+  useCreateIndex: true,
+  useNewUrlParser: true, 
+  useUnifiedTopology: true
+})
+.then( x => {
+  console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
 })
 .catch((error)=>{
-  console.log('error', error)
+  console.log('error connecting to mongoDB', error)
 })
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,11 +34,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const users = require('./routes/users')
+
 
 app.use('/', users)
 
-const index = require('./routes/index')
+
 
 app.use('/', index);
 
