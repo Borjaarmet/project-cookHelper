@@ -11,13 +11,10 @@ router.get('/users/signup',(req, res) => {
 
 router.post('/users/signup', (req, res, next) => {
   const { userName, email, password } = req.body;
-  if(!userName || !email || !password){
-    res.render('users/signup', {errorMessage: 'All fields are mandatory. Please provide your username, email and password.'})
-    return;
-  }
+ 
  User.create({ userName, email, password })
     .then((newUser) => {
-      consol.log('newly created user is: ',newUser)
+      console.log('newly created user is: ',newUser)
       res.redirect('/users/welcome')
     })
     .catch(error => {
