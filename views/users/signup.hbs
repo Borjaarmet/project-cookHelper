@@ -1,10 +1,30 @@
-<h1>Signup</h1>
 
-<form action="/users/signup" method="POST">
-<label for="input-name">name:</label>
-<input type="text" name="input-name" id="name">
+<h1></h1>
+<div id="signup">
+  
+    <form action="/signup" method="POST">
+    <label for="input-username">Username</label>
+        <br>
+    <input type="text" name="username" id="username" placeholder="Your username"/>
+        <br>
+    <label for="input-password">Password</label>
+    <br>
+    <input type="password" name="password" placeholder="********"/>
+        <br>
+    <label for="input-email">Email</label>
+    <br>
+    <input type="email" name="email" placeholder="Your email"/>
+    <br>
+    <label for="input-age">Age</label>
+    <br>
+    <input type="age" name="age" placeholder="Your age"/>
+    <br>
 
-<button>
-    <a href="/users/welcome">Create account</a>
-</button>
-</form>
+    <button type="submit">Create account</button>
+    </form>
+    {{#if errorMessage}}
+     <p class="error">{{errorMessage}}</p>
+     {{/if}}
+
+    </div>
+

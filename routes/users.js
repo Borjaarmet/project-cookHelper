@@ -13,7 +13,7 @@ router.post('/users/signup', (req, res, next) => {
   const { userName, email, password } = req.body;
 
  User.create({ userName, email, password })
-  console.log(req.body)
+  
     .then(() => res.redirect('/users/welcome'))
     .catch(error => {
       next(error)
