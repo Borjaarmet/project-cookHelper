@@ -9,19 +9,20 @@ const { route } = require('./users');
 const router = express.Router();
 
 /* GET users listing. */
-router.get('/users/signup',(req, res) => {
+router.get('/signup',(req, res) => {
     res.render('users/signup')
   });
   
-  router.post('/users/signup', (req, res, next) => {
-    const { userName, email, password } = req.body;
+  router.post('/signup', (req, res, next) => {
+    const { username, email, password } = req.body;
+    console.log(req.body)
   /* 
     if(!userName || !email || !password){
       res.render('users/signup', {errorMessage: 'All fields are mandatory. Please provide your username, email and password.'});
       return;
       
     }
-    */
+    
     const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
     if(!regex.test(password)){
           res
@@ -29,18 +30,21 @@ router.get('/users/signup',(req, res) => {
           .render('users/signup', {errorMessage: 'Password needs to have at least 6 chars and must contain at least one number, one lowercase and one uppercase letter.' });
           return;
     }
+    */
     bcryptjs
       .genSalt(saltRounds)
       .then(salt => bcryptjs.hash(password, salt))
       .then(passwordHash => {
         console.log(`Password hash: ${passwordHash}`);
-        return User.create({userName,email, passwordHash})
+        return User.create({username,email, passwordHash})
         .then((usersFromDB)=> {
             console.log('newly created user is: ', usersFromDB)
             res.redirect('/users/profile')
         })
         .catch((error)=> {
+            console.log(error.message)
           if (error instanceof mongoose.Error.ValidationError) {
+
               res.status(500).render('users/signup', { errorMessage: error.message });
           } else if(error.code === 11000){
               res.status(500).render('users/welcome', {
@@ -53,11 +57,11 @@ router.get('/users/signup',(req, res) => {
    
   })
   
-  router.get('/users/login',(req, res) => {
+  router.get('/login',(req, res) => {
     res.render('users/login')
   });
   
-  router.post('/users/login',(req,res,next) => {
+  router.post('/login',(req,res,next) => {
     console.log('SESSION =====>', req.session)
       const {email, password} = req.body;
   
