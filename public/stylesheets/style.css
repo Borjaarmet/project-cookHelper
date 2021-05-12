@@ -1,47 +1,119 @@
-*{
-  margin: auto;
-}
+
 body {
-  padding: 50px;
-  font: 14px;
-}
-
-a {
-  color: #00B7FF;
-}
-
-/*   HOME PAGE   */
-.nav-bar{
-  display: flex;
-  background-color: steelblue;
-  padding:40px;
-}
-.btn-nav{
-  padding:20px;
-}
-.container{
-  display: flex;
+  display: flexbox;
   background-image: url('/images/background-cook4.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1600px;
-  width: 100vw;
+  height: 100vh;
+ 
 }
-.img-logo{
-  width: 100%;
-  text-align:center;
-  justify-content: center;
-  align-items: center;
-  color: wheat;
-  font-size: 60px;
+a{
+  text-decoration: none;
+  color: beige;
 }
 
-.subtittle{
+
+
+/*   HOME PAGE   */
+
+
+.tittle{
+  position: relative;
+  top:35%;
   text-align: center;
-  color: wheat;
+  border: 3px solid beige;
+  background-color: rgba(199, 146, 77, 0.5);
+  margin: 10px 75px;
+  padding: 20px 0px;
+  color: rgb(240, 223, 216);
+  font-size: 50px;
+  
+  
 }
+.tittle-text{
+  margin: 0px;
+}
+.subtittle{
+  margin: 0px;
+}
+.buttons{
+  text-align: center;
+  position: absolute;
+  top:55%;
+  left:15%; 
+}
+.btn-link{
+  background-color: rgba(199, 146, 77, 0.7);
+  padding: 25px 50px;
+  border-radius: 25px;
+  font-size: xx-large;
+  margin-left: 100px;
+  transition: all 0.5s;
+  background-position: center;
+  transition: background 0.2s;
+}
+.btn-link:hover {
+  background: rgba(199, 146, 77, 0.7) radial-gradient(circle, transparent 1%, #dad5d1fd 1%) center/15000%;
+}
+.btn-link:active {
+  background-color:darkgoldenrod;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/*   SIGNUP PAGE   */
+
+#signup{
+  position: relative;
+  top:26%;
+  text-align: center;
+  border: 3px solid beige;
+  border-radius: 10px;
+  /*background-color: rgba(199, 146, 77, 0.5);*/
+  margin: 10px 75px;
+  padding: 30px 0px;
+  color: rgb(240, 223, 216);
+  font-size: 50px;
+}
+input{
+  font-size: 45px;
+  margin-top: 20px;
+}
+::placeholder{
+  color: gray;
+  opacity: 0.3;
+}
+.submit{
+  padding: 20px 40px;
+  margin-top: 40px;
+  font-size: 30px;
+  background-color: rgba(199, 146, 77, 0.7);
+  color: beige;
+}
+
+/*   LOGIN PAGE   */
+
+#login{
+  position: relative;
+  top:30%;
+  text-align: center;
+  border: 3px solid beige;
+  border-radius: 10px;
+  /*background-color: rgba(199, 146, 77, 0.5);*/
+  margin: 10px 75px;
+  padding: 30px 0px;
+  color: rgb(240, 223, 216);
+  font-size: 50px;
+}
+
+/*   WELCOME PAGE   */
+
+h2{
+  font-size: 90px;
+}
+
 .error{
   background-color: tomato;
-  padding: 30px;
+  padding: 60px;
 }

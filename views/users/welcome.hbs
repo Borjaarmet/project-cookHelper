@@ -1,10 +1,19 @@
-<h1>Welcome !!</h1>
+{{#if userInSession}}
+<div id="signup">
+<h2>Welcome, {{userInSession.username}}! </h2>
 
-<button>
+
+{{else}}
+<p>Still no logged in user, sorry!</p>
+{{/if}}
+
+<button class="submit">
     <a href="/search">Search</a>
 </button>
 
 
-<button>
+<button class="submit">
     <a href="/profile">profile</a>
 </button>
+
+</div>

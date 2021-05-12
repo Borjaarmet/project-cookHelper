@@ -11,12 +11,14 @@ const router = express.Router();
 
 
 router.get('/welcome',(req, res) => {
-  res.render('users/welcome')
+  res.render('users/welcome',{ userInSession: req.session.currentUser })
 });
 
 router.get('/profile',(req, res) => {
-  res.render('users/profile')
+  res.render('users/profile', { userInSession: req.session.currentUser })
 });
+
+
 
 router.get('/search',(req, res) => {
   res.render('users/search')

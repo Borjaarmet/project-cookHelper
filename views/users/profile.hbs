@@ -1,16 +1,20 @@
+{{#if userInSession}}
+<h2>Welcome, {{userInSession.username}}! </h2>
+<h2>This is your profile page my friend! </h2>
 
-<h1> {{user.userName}}Profile</h1>
+{{else}}
+<p>Still no logged in user, sorry!</p>
+{{/if}}
 
-<form action="/users/profile" method="POST">
+<form action="/profile" method="POST">
 <label for="input-name">name:</label>
-<input type="text" name="input-name" id="name">
+<input type="text" name="input-name" id="name" value="{{userInSession.username}}">
 
 <label for="input-email">email:</label>
-<input type="text" name="input-email" id="email">
+<input type="text" name="input-email" id="email" value="{{userInSession.email}}">
 
 <p>falta rellenar campos</p>
 
-<button>
-    <a href="/users/welcome">save changes</a>
-</button>
+<button type="submit">Save Changes</button>
 </form>
+

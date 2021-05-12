@@ -4,22 +4,21 @@
 	<form action="/signup" method="POST">
 		<label for="input-username">Username</label>
 			<br>
-		<input type="text" name="username" id="username" placeholder="Your username"/>
+		<input class="inputs" type="text" name="username" id="username" placeholder="Your username"/>
 			<br>
-		<label for="input-password">Password</label>
+		<label class="inputs" for="input-password">Password</label>
 			<br>
-		<input type="password" name="password" placeholder="********"/>
+		<input class="inputs" type="password" name="password" placeholder="********"/>
 			<br>
 		<label for="input-email">Email</label>
 			<br>
-		<input type="email" name="email" placeholder="Your email"/>
+		<input class="inputs" type="email" name="email" placeholder="Your email"/>
 			<br>
-		<button type="submit">Create account</button>
+		<button class="submit" type="submit">Create account</button>
 	</form>
+
 	{{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
-	
-
 </div>
 
