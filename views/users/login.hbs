@@ -1,13 +1,15 @@
 <h1>login</h1>
 
-<form action="/users/login" method="POST">
+<form action="/login" method="POST">
 <label for="input-email">Email:</label>
-<input type="text" name="input-email" id="email">
+<input type="text" name="email" id="input-email">
 
 <label for="input-password">Password:</label>
-<input type="text" name="input-password" id="password">
+<input type="password" name="password" id="input-password">
 
-<button>
-    <a href="/users/welcome">Login</a>
-</button>
+<button type="submit">Login</button>
 </form>
+
+{{#if errorMessage}}
+ <p class="error">{{errorMessage}}</p>
+{{/if}}

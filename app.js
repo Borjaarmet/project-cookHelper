@@ -9,23 +9,14 @@ const mongoose = require('mongoose');
 
 
 // poner en variable de entorno
-mongoose.connect('mongodb://localhost:27017/project-CookHelper', 
-{
-  useCreateIndex: true,
-  useNewUrlParser: true, 
-  useUnifiedTopology: true
-})
-.then( x => {
-  console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-})
-.catch((error)=>{
-  console.log('error connecting to mongoDB', error)
-})
+
 
 const app = express();
 
 // use session here:
 require('./configs/session.config')(app);
+
+require('./configs/db.config')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

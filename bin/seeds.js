@@ -1,3 +1,4 @@
+const { createError } = require('http-errors');
 const mongoose = require('mongoose');
 
 const Recipe = require('../models/recipe-model');
@@ -100,12 +101,11 @@ const recipes = [
 ];
 
 Recipe.create(recipes)
-.then((dataFromDB)=> {
-console.log( 'recipes created: ', dataFromDB.length)
+.then(()=> {
 mongoose.connection.close();
 })
 .catch((error)=> {
-console.log('An error ocurred while connecting',error)
+    createError(error)
 });
 
 
