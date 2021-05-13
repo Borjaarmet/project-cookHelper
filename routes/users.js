@@ -7,7 +7,7 @@ const User = require('../models/user-model');
 
 const router = express.Router();
 
-router.get('/', (req,res) => res.render('/'))
+router.get('/', (req,res) => res.render('home'))
 
 router.get('/welcome',(req, res) => {
   res.render('users/welcome',{ userInSession: req.session.currentUser })

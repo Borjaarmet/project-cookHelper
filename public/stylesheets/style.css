@@ -142,6 +142,27 @@ h2{
   font-size: 50px;
 }
 
+/*    RECIPES PAGE   */
+
+.recipe-a{
+  color:red;
+}
+
+/*   RECIPES-INFO PAGE  */
+
+.recipe-detail{
+  position: relative;
+  top: 15%;
+  color:beige;
+  text-align: justify;
+  border:2px solid beige;
+  padding:20px;
+}
+.recipe-detail h1{
+  text-align: center;
+  text-decoration: underline;
+}
+
 
 .error{
   background-color: tomato;

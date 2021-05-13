@@ -1,9 +1,10 @@
 
 <div class="list-recipes">
-{{#each ingredient}}
+{{#each allrecipes}}
 
 <ul>
-    <li>{{recipeName}}</li><a href="/recipe/info">Details</a>
+    <li>{{recipeName}}</li>
+    <a class="submit" href="/recipes/{{_id}}/details">Details</a>
 </ul>
 
 {{/each}}
