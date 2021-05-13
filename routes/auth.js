@@ -68,7 +68,8 @@ router.post('/login',(req,res,next) => {
       
     User.findOne({email}) // <== check if there's user with the provided email
        .then((user)=> {      // response from DB - doesn't matter if found or not
-          if(!user){         // <== if there's no user with provided email, notify the user who is trying to login
+          if(!user){
+                       // <== if there's no user with provided email, notify the user who is trying to login
               res.redirect('/login', )
               
   
@@ -79,6 +80,8 @@ router.post('/login',(req,res,next) => {
           //                   pass the user object to this view
               
               req.session.currentUser = user;
+                console.log('login user', user)
+                console.log('req.session', req.session.currentUser)
               res.redirect('/welcome')
           }else{
               // if the two passwords DON'T match, render the login form again

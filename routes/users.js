@@ -14,16 +14,23 @@ router.get('/welcome',(req, res) => {
 });
 
 router.get('/profile/edit',(req, res) => {
+  const user = req.session.currentUser;
+  console.log(user)
   res.render('users/profile', { userInSession: req.session.currentUser })
 });
 
 router.post('/profile/edit', (req, res, next) => {
-  // const user = req.session.currentUser;
+  
+  const user = req.session.currentUser;
+  
+  
+  console.log("the user is: ", user)
+ 
   // const {username, email} = req.body
-  User.findOneAndUpdate( req.session.currentUser,{new:true})
+  User.findByIdAndUpdate(user,{new:true})
   .then((updateUser)=> {
     console.log("the update user is: ",updateUser)
-    res.render('users/welcome', updateUser)
+    res.redirect('/welcome')
   })
   .catch((err)=> {
     next(err)

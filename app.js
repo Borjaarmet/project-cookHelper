@@ -13,8 +13,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-// use session here:
-require('./configs/session.config')(app);
+
 
 require('./configs/db.config')
 
@@ -28,10 +27,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// use session here:
+require('./configs/session.config')(app);
+
 
 const users = require('./routes/users');
 const recipes = require('./routes/recipes');
-const authRouter = require('./routes/auth.routes');
+const authRouter = require('./routes/auth');
 
 
 app.use('/', users)
