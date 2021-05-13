@@ -1,1 +1,10 @@
-<h1>List of recipes</h1>
+
+<div class="list-recipes">
+{{#each ingredient}}
+
+<ul>
+    <li>{{recipeName}}</li><a href="/recipe/info">Details</a>
+</ul>
+
+{{/each}}
+</div>

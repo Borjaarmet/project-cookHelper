@@ -92,6 +92,8 @@ router.post('/login',(req,res,next) => {
    
 
 router.post('/logout', (req,res)=>{
+    console.log('estoy dentro de la ruta logout',req.body)
+    console.log(req.session)
     req.session.destroy();
     res.redirect('/')
 })

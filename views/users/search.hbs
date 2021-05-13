@@ -1,14 +1,15 @@
 <h1>Search page </h1>
 
-<form action="/users/search" method="POST">
-
+<div class="signup">
+<form action="/search" method="POST">
 
 <label for="carnes">Escoge tipo de carne:</label>
 <select id="carnes" name="lista-carnes" form="carneform">
   <option value="ternera">ternera</option>
-  <option value="ceedo">cerdo</option>
+  <option value="cerdo">cerdo</option>
   <option value="cordero">cordero</option>
   <option value="pollo">pollo</option>
+  <option value=""></option>
 </select>
 <br>
 <label for="verduras">Escoge tipo de verduras:</label>
@@ -17,6 +18,7 @@
   <option value="cebolla">cebolla</option>
   <option value="pimientos">pimientos</option>
   <option value="calabacin">calabacin</option>
+  <option value=""></option>
 </select>
 <br>
 <label for="verduras">Escoge tipo de verduras:</label>
@@ -25,6 +27,7 @@
   <option value="cebolla">cebolla</option>
   <option value="pimientos">pimientos</option>
   <option value="calabacin">calabacin</option>
+  <option value=""></option>
 </select>
 <br>
 <label for="verduras">Escoge tipo de verduras:</label>
@@ -33,11 +36,10 @@
   <option value="cebolla">cebolla</option>
   <option value="pimientos">pimientos</option>
   <option value="calabacin">calabacin</option>
+  <option value=""></option>
 </select>
 <br>
-<button>
-    <a href="/users/recipes"> Search recipes</a>
-</button>
-
-
+<button type="submit">Search</button>
 </form>
+
+</div>

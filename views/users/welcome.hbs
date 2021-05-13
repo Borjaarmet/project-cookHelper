@@ -1,19 +1,24 @@
+
 {{#if userInSession}}
-<div id="signup">
-<h2>Welcome, {{userInSession.username}}! </h2>
-
-
-{{else}}
-<p>Still no logged in user, sorry!</p>
-{{/if}}
-
+<div id="welcome"></div>
+<h2>Welcome {{userInSession.username}}! </h2>
 <button class="submit">
     <a href="/search">Search</a>
 </button>
 
-
+<div class="buttons">
 <button class="submit">
     <a href="/profile">profile</a>
 </button>
+
+<form id="logout-form" action="/logout" method="POST">
+    <button type="submit" class="submit">Logout</button>
+</form>
+</div>
+
+
+{{/if}}
+
+
 
 </div>
