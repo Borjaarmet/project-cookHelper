@@ -1,10 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-const Recipe= require('../models/recipe-model')
+const Recipe= require('../models/recipe-model');
+
 const router = express.Router();
 
-router.get('/search',(req, res,next) => {
+router.get('/search',(req, res) => {
   res.render('users/search')
 });
 
@@ -21,7 +22,5 @@ router.post('/search',(req, res, next) => {
   })
   
 });
-
-
 
 module.exports = router;
