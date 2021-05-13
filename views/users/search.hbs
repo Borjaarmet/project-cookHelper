@@ -1,45 +1,66 @@
 <h1>Search page </h1>
 
-<div class="signup">
-<form action="/search" method="POST">
+<div id="signup">
+  <form action="/search" method="POST">
 
-<label for="carnes">Escoge tipo de carne:</label>
-<select id="carnes" name="lista-carnes" form="carneform">
-  <option value="ternera">ternera</option>
-  <option value="cerdo">cerdo</option>
-  <option value="cordero">cordero</option>
-  <option value="pollo">pollo</option>
-  <option value=""></option>
-</select>
-<br>
-<label for="verduras">Escoge tipo de verduras:</label>
-<select id="verduras" name="lista-verduras" form="verdurasform">
-  <option value="tomates">tomates</option>
-  <option value="cebolla">cebolla</option>
-  <option value="pimientos">pimientos</option>
-  <option value="calabacin">calabacin</option>
-  <option value=""></option>
-</select>
-<br>
-<label for="verduras">Escoge tipo de verduras:</label>
-<select id="verduras" name="lista-verduras" form="verdurasform">
-  <option value="tomates">tomates</option>
-  <option value="cebolla">cebolla</option>
-  <option value="pimientos">pimientos</option>
-  <option value="calabacin">calabacin</option>
-  <option value=""></option>
-</select>
-<br>
-<label for="verduras">Escoge tipo de verduras:</label>
-<select id="verduras" name="lista-verduras" form="verdurasform">
-  <option value="tomates">tomates</option>
-  <option value="cebolla">cebolla</option>
-  <option value="pimientos">pimientos</option>
-  <option value="calabacin">calabacin</option>
-  <option value=""></option>
-</select>
-<br>
-<button type="submit">Search</button>
-</form>
+    <label for="meet">choose the type of meat</label>
+    <br>
+    <select id="meet" name="meet-list" form="meetform">
+      <option value="beef">beef</option>
+      <option value="pork">pork</option>
+      <option value="lamb">lamb</option>
+      <option value="chicken">chicken</option>
+      <option value=""></option>
+    </select>
+    <br>
+    <label for="fish">choose the type of fish</label>
+    <br>
+    <select id="fish" name="fish-list" form="fishform">
+      <option value="salmon">salmon</option>
+      <option value="tuna">tuna</option>
+      <option value="monkfish">monkfish</option>
+      <option value="seabass">seabass</option>
+      <option value=""></option>
+    </select>
+    <br>
+    <label for="vegetables">choose the type of vegetables</label>
+    <br>
+    <select id="vegetables" name="vegetables-list" form="vergetablesform">
+      <option value="tomatoes">tomatoes</option>
+      <option value="onion">onion</option>
+      <option value="peppers">peppers</option>
+      <option value="zucchini">zuchini</option>
+      <option value="avocado">avocado</option>
+      <option value="cucumber">cucumber</option>
+      <option value="pumpkin">pumpkin</option>
+      <option value="carrots">carrots</option>
+      <option value=""></option>
+    </select>
+    <br>
+    <label for="pasta">choose the type of pasta</label>
+    <br>
+    <select id="pasta" name="pasta-list" form="pastaform">
+      <option value="raviolis">raviolis</option>
+      <option value="spaghetti">spaghetti</option>
+      <option value="macarroni">macarroni</option>
+      <option value="noodles">noodles</option>
+      <option value=""></option>
+    </select>
+    <br>
+    <label for="dairy">choose the type of dairy</label>
+    <br>
+    <select id="dairy" name="dairy-list" form="dairyform">
+      <option value="eggs">eggs</option>
+      <option value="milk">milk</option>
+      <option value="butter">butter</option>
+      <option value="cheddar">cheddar</option>
+      <option value="parmesan">parmesan</option>
+      <option value="sour cream">sour cream</option>
+      <option value="coco milk">coco milk</option>
+      <option value=""></option>
+    </select>
+    <br>
+    <button type="submit">Search</button>
+  </form>
 
 </div>

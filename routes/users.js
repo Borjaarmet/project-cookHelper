@@ -13,9 +13,22 @@ router.get('/welcome',(req, res) => {
   res.render('users/welcome',{ userInSession: req.session.currentUser })
 });
 
-router.get('/profile',(req, res) => {
+router.get('/profile/edit',(req, res) => {
   res.render('users/profile', { userInSession: req.session.currentUser })
 });
+
+router.post('/profile/edit', (req, res, next) => {
+  // const user = req.session.currentUser;
+  // const {username, email} = req.body
+  User.findOneAndUpdate( req.session.currentUser,{new:true})
+  .then((updateUser)=> {
+    console.log("the update user is: ",updateUser)
+    res.render('users/welcome', updateUser)
+  })
+  .catch((err)=> {
+    next(err)
+  })
+})
 
 
 module.exports = router;

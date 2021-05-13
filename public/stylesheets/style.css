@@ -127,6 +127,8 @@ h2{
   font-size: 50px;
 }
 
+/*   Profile page   */
+
 /*    SEARCH PAGE   */
 
 .list-recipes{
@@ -161,6 +163,10 @@ h2{
 .recipe-detail h1{
   text-align: center;
   text-decoration: underline;
+}
+select{
+  font-size: 45px;
+  margin-top: 20px;
 }
 
 

@@ -4,27 +4,30 @@
 
 {{else}}
 <p>Still no logged in user, sorry!</p>
+
 {{/if}}
-<div class="signup">
-<form action="/profile" method="POST">
-<label for="input-name">name:</label>
-<br>
-<input type="text" name="input-name" id="name" value="{{userInSession.username}}">
-<br>
-<label for="input-email">email:</label>
-<br>
-<input type="text" name="input-email" id="email" value="{{userInSession.email}}">
-<br>
-<label for="input-email">email:</label>
-<br>
-<input type="text" name="input-email" id="email" value="{{userInSession.email}}">
-<br>
-<label for="input-email">email:</label>
-<br>
-<input type="text" name="input-email" id="email" value="{{userInSession.email}}">
-<br>
-<button class="submit" type="submit">Save Changes</button>
-</form>
+<div class="profile-form">
+    <form action="/profile/edit" method="POST">
+        <label for="input-name">name:</label>
+        <br>
+        <input type="text" name="input-name" id="name" value="{{userInSession.username}}">
+        <br>
+        <label for="input-email">email:</label>
+        <br>
+        <input type="text" name="input-email" id="email" value="{{userInSession.email}}">
+        <br>
+        <label for="input-email">email:</label>
+        <br>
+        <input type="text" name="input-email" id="email" value="{{userInSession.email}}">
+        <br>
+        <label for="input-email">email:</label>
+        <br>
+        <input type="text" name="input-email" id="email" value="{{userInSession.email}}">
+        <br>
+        <button class="submit" type="submit">Save Changes</button>
+    </form>
 
 </div>
+
+
 
