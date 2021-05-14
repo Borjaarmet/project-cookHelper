@@ -25,9 +25,8 @@ router.post('/profile/edit', (req, res, next) => {
   
   console.log("the user is: ", req.session.currentUser);
   console.log("the id is: ", _id);
-  
 
-  User.findByIdAndUpdate( _id,{username, email},{new:true})
+  User.findByIdAndUpdate( _id, {username, email}, {new:true})
   .then((updateUser)=> {
     console.log("the update user is: ",updateUser)
     res.redirect('/welcome')

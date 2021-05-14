@@ -12,6 +12,7 @@ const app = express();
 
 require('./configs/db.config')
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -24,7 +25,7 @@ app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // use session here:
-require('./configs/session.config')(app);
+require('./configs/session.config');
 
 const users = require('./routes/users');
 const recipes = require('./routes/recipes');
