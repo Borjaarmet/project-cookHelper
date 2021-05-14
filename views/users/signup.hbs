@@ -1,4 +1,8 @@
-<h1>Sign in to Cook Helper</h1>
+<nav class="nav-bar">
+	<button class="btn-nav">
+	<a class="nav-bar-link" href="/">Home</a>
+	</button>
+</nav>
 <div id="signup">
   
 	<form action="/signup" method="POST">
@@ -14,7 +18,7 @@
 			<br>
 		<input class="inputs" type="email" name="email" placeholder="Your email"/>
 			<br>
-		<button class="submit" type="submit">Create account</button>
+		<button class="submit" type="submit">Register</button>
 	</form>
 
 	{{#if errorMessage}}

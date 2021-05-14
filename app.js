@@ -10,9 +10,6 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-
-
-
 require('./configs/db.config')
 
 // view engine setup
@@ -26,21 +23,16 @@ app.use(cookieParser());
 app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 // use session here:
 require('./configs/session.config')(app);
-
 
 const users = require('./routes/users');
 const recipes = require('./routes/recipes');
 const authRouter = require('./routes/auth');
 
-
 app.use('/', users)
 app.use('/', recipes);
 app.use('/',authRouter)
-
-
 
 // catch 404 and forward to error handler
 app.use((req, res, next) =>{

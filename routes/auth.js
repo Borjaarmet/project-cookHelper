@@ -3,7 +3,7 @@ const express = require('express');
 const bcryptjs = require('bcryptjs');
 
 const saltRounds = 10;
-const flash = require('connect-flash');
+// const flash = require('connect-flash');
 const User = require('../models/user-model');
 const { route } = require('./users');
 
@@ -64,7 +64,6 @@ router.post('/login',(req,res,next) => {
       console.log('SESSION =====>', req.body)
      
     if(email === '' || password === ''){
-          console.log('empty passw email')
           res.render('users/login', {errorMessage: 'Username and email need to be unique. Either username or email is already used.'});
           return;
     }

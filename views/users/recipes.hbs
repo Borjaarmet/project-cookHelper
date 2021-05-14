@@ -1,10 +1,18 @@
-
+<nav class="nav-bar">
+	<button class="btn-nav">
+	<a class="nav-bar-link" href="/">Home</a>
+	</button>
+</nav>
 <div class="list-recipes">
 {{#each allrecipes}}
 
 <ul>
-    <li>{{recipeName}}</li>
-    <a class="submit" href="/recipes/{{_id}}/details">Details</a>
+    <li>{{recipeName}} </li>
+
+	<button class="btn-details">
+    <a  href="/recipes/{{_id}}/details">Details</a>
+	</button>
+	<hr>
 </ul>
 
 {{/each}}

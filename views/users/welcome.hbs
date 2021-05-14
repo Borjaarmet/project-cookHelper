@@ -1,24 +1,37 @@
+<nav class="nav-bar">
+	<button class="btn-nav">
+	<a class="nav-bar-link" href="/">Home</a>
+	</button>
+</nav>
+<div id="welcome">
+  {{#if userInSession}}
 
-{{#if userInSession}}
-<div id="welcome"></div>
-<h2>Welcome {{userInSession.username}}! </h2>
-<button class="submit">
-    <a href="/search">Search</a>
-</button>
-
-<div class="buttons">
-<button class="submit">
-    <a href="/profile/edit">profile</a>
-</button>
-
-<form id="logout-form" action="/logout" method="POST">
-    <button type="submit" class="submit">Logout</button>
-</form>
+    <h2>Welcome {{userInSession.username}}! </h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem atque reprehenderit placeat, impedit error soluta tempore illum nam quos velit voluptates,
+         commodi explicabo veniam est aliquid at magnam ipsum. Ipsam.</p>
+    <button class="submit">
+        <a href="/search">Search</a>
+    </button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Et tempora quos sint temporibus autem nulla minus optio enim ratione. Odit tempore voluptatibus perspiciatis a minima quidem facere dignissimos hic quis!</p>
+    <button class="submit">
+        <a href="/profile/edit">profile</a>
+    </button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ab blanditiis sit.
+         Officiis repudiandae eaque temporibus quo nesciunt optio inventore iusto nulla illum neque, rem, corrupti quidem voluptate? Quo, hic.</p>
+    <form id="logout-form" action="/logout" method="POST">
+        <button type="submit" class="submit">Logout</button>
+    </form>
+  {{/if}}
 </div>
 
 
-{{/if}}
 
 
 
-</div>
+
+
+
+
+
+
