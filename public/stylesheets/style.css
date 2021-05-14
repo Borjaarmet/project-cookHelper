@@ -71,6 +71,9 @@ a{
   color: white;
   font-size: 40px;
 }
+.nav-bar-link{
+  float: right;
+}
 .btn-nav{
   padding:10px 40px;
 }
