@@ -129,6 +129,13 @@ h2{
 
 /*   Profile page   */
 
+.submit-profile{
+  position: relative;
+  left:60%;
+  top:60%;
+  padding: 20px;
+}
+
 /*    SEARCH PAGE   */
 
 .list-recipes{
