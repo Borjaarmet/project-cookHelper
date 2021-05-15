@@ -10,18 +10,14 @@
 {{/if}}
 <div class="profile-form">
     <form action="/profile/edit" method="POST">
-        <label for="input-name">Username</label>
+        <label htmlFor="name">Username</label>
         <br>
-        <input type="text" name="input-name" id="name" value="{{userInSession.username}}">
+        <input type="text" name="username" id="name" value="{{userInSession.username}}">
         <br>
-        <label for="input-email">Email</label>
+        <label htmlFor="email">Email</label>
         <br>
-        <input type="text" name="input-email" id="email" value="{{userInSession.email}}">
-        <br>
-        <label for="input-email">email</label>
-        <br>
-        <input type="text" name="input-email" id="email" value="{{userInSession.email}}">
-        <br>       
+        <input type="text" name="email" id="email" value="{{userInSession.email}}">
+        <br>     
         <button class="submit" type="submit">Save Changes</button>
         <br>
     </form>

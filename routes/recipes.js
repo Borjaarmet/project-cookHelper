@@ -10,6 +10,10 @@ router.get('/search',(req, res) => {
 });
 
 router.post('/search',(req, res, next) => {
+  const meat = req.body;
+  const id = req.params;
+  console.log(`data:${meat}`)
+  console.log('id',id)
   Recipe.find({})
   .then((allrecipes) => {
     res.render('users/recipes', {allrecipes})

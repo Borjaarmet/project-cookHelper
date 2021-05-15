@@ -25,7 +25,7 @@ app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // use session here:
-require('./configs/session.config');
+require('./configs/session.config')(app);
 
 const users = require('./routes/users');
 const recipes = require('./routes/recipes');
