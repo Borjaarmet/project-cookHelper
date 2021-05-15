@@ -8,52 +8,56 @@
 
     <label for="meat">choose the type of meat</label>
     <br>
-    <select inputmode="meat" id="meat" name="meat" form="meat">
-      
+    <select  id="meat" name="meat">
+      <option value=""></option>
       <option value="beef">beef</option>
       <option value="pork">pork</option>
       <option value="lamb">lamb</option>
       <option value="chicken">chicken</option>
-      <option value=""></option>
+      
     </select>
     <br>
     <label for="fish">choose the type of fish</label>
     <br>
-    <select id="fishform" name="fish" form="fishform">
+    <select id="fishform" name="fish" >
+         <option value=""></option>
       <option value="salmon">salmon</option>
       <option value="tuna">tuna</option>
       <option value="monkfish">monkfish</option>
       <option value="seabass">seabass</option>
-      <option value=""></option>
+   
     </select>
     <br>
     <label for="vegetables">choose the type of vegetables</label>
     <br>
-    <select id="vegetablesform" name="vegetables" form="vergetablesform">
+    <select id="vegetablesform" name="vegetables" >
+       <option value=""></option>
       <option value="tomatoes">tomatoes</option>
-      <option value="onion">onion</option>
+      <option value="onions">onion</option>
       <option value="peppers">peppers</option>
       <option value="zucchini">zuchini</option>
-      <option value="avocado">avocado</option>
+      <option value="avocados">avocado</option>
       <option value="cucumber">cucumber</option>
       <option value="pumpkin">pumpkin</option>
       <option value="carrots">carrots</option>
-      <option value=""></option>
+     
     </select>
     <br>
     <label for="pasta">choose the type of pasta</label>
     <br>
-    <select id="pastaform" name="pasta" form="pastaform">
-      <option value="raviolis">raviolis</option>
+    <select id="pastaform" name="pasta" >
+       <option value=""></option>
+      <option value="ravioli">raviolis</option>
       <option value="spaghetti">spaghetti</option>
       <option value="macarroni">macarroni</option>
       <option value="noodles">noodles</option>
-      <option value=""></option>
+     
     </select>
     <br>
     <label for="dairy">choose the type of dairy</label>
     <br>
-    <select id="dairyform" name="dairy" form="dairyform">
+    <select id="dairyform" name="dairy" >
+       <option value=""></option>
       <option value="eggs">eggs</option>
       <option value="milk">milk</option>
       <option value="butter">butter</option>
@@ -61,11 +65,15 @@
       <option value="parmesan">parmesan</option>
       <option value="sour cream">sour cream</option>
       <option value="coco milk">coco milk</option>
-      <option value=""></option>
+     
     </select>
     <br>
     
     <button class="submit" type="submit">Search</button>
   </form>
+
+  {{#if errorMessage}}
+ <p class="error">{{errorMessage}}</p>
+{{/if}}
 
 </div>

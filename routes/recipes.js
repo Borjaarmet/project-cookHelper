@@ -10,13 +10,17 @@ router.get('/search',(req, res) => {
 });
 
 router.post('/search',(req, res, next) => {
-  const meat = req.body;
-  const id = req.params;
-  console.log(`data:${meat}`)
-  console.log('id',id)
-  Recipe.find({})
-  .then((allrecipes) => {
-    res.render('users/recipes', {allrecipes})
+  const {meat, fish, vegetables, pasta, dairy} = req.body;
+  if(meat ==='' && fish ==='' && vegetables === '' && pasta ==='' && dairy ===''){
+    console.log(' estoy dentro del if')
+    res.render('users/search', {errorMessage: "selecciona algo!!!!!"})
+    return;
+  }
+  console.log('data:',{meat,fish,vegetables,pasta,dairy})
+  Recipe.find({$or:[{ingredientsList:meat}, {ingredientsList:fish},{ingredientsList:vegetables}, {ingredientsList:pasta}, {ingredientsList:dairy}]})
+  .then((recipeFounded) => {
+    console.log('recipe founded: ', recipeFounded)
+    res.render('users/recipes', {recipeFounded})
   })
   .catch((err) => {
     next(err)
