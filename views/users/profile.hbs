@@ -2,9 +2,9 @@
 	<button class="btn-nav">
 		<a class="nav-bar-link" href="/"><img class="img-logo" src="/images/Logo (1).png" alt="" /></a>	
 	</button>
-      <button class="btn-nav">
-    <a href="/logout">Logout</a>
-  </button>
+     <form id="logout-form" action="/logout" method="POST">
+        <button type="submit" class="btn-nav">Logout</button>
+    </form>
   
 </nav>
 {{#if userInSession}}

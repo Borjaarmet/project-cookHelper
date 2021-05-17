@@ -2,21 +2,25 @@
 	<button class="btn-nav">
 		<a class="nav-bar-link" href="/"><img class="img-logo" src="/images/Logo (1).png" alt="" /></a>	
 	</button>
-     <button class="btn-nav">
-    <a href="/logout">Logout</a>
-  </button>
+     <form id="logout-form" action="/logout" method="POST">
+        <button type="submit" class="btn-nav">Logout</button>
+    </form>
   
 </nav>
 <div class="recipe-detail">
  {{#each recipe}}
   
-    <h1>{{this.recipeName}}</h1>
-    <h3>{{this.difficulty}}</h3>
-    <h3>{{this.TimeToCook}}</h3>           
-    <p>{{this.ingredientsList}} </p>         
+    <h1>{{recipeName}}</h1>
+    <h3>{{difficulty}}</h3>
+    <h3>{{TimeToCook}}</h3> 
+     
+      <ul>   
+        {{#each recipe.ingredientsList}}  
+      <li class="li-details"> {{this}} </li>
+        {{/each}} 
+      </ul> 
+    
     <p>{{this.Steps}}</p>
        
-    
-
- {{/each}}
+  {{/each}}
 </div>

@@ -250,7 +250,8 @@ hr{
 .recipe-detail{
   position: relative;
   top:18%;
-  text-align: justify;
+  text-align:right;
+  
   border: 3px solid beige;
   border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
@@ -267,6 +268,10 @@ hr{
 select{
   font-size: 45px;
   margin-top: 20px;
+}
+.li-details{
+  text-align: justify;
+  list-style-type: circle;
 }
 
 

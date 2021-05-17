@@ -29,10 +29,12 @@ router.post('/search',(req, res, next) => {
 });
 
 router.get('/recipes/:id/details', (req,res,next) => {
-  // const {recipeName,difficulty,TimeToCook,ingredientsList,Steps} = req.body;
+  const {recipeName,difficulty,TimeToCook,ingredientsList,Steps} = req.body;
   Recipe.findById(req.params.id)
   .then((recipe) => {
     console.log('recipe founded: ', {recipe})
+    console.log("ingredients list: ", recipe.ingredientsList)
+    console.log("steps: ",recipe.Steps)
     res.render('users/recipes-info', {recipe})
   })
   .catch((err) => {

@@ -71,7 +71,8 @@ router.post('/login',(req,res,next) => {
        .then((user)=> {      // response from DB - doesn't matter if found or not
           if(!user){
                        // <== if there's no user with provided email, notify the user who is trying to login
-              res.redirect('/login', )
+             res.render('users/login', {errorMessage: 'Sorry but this username is not registered'});
+                       
               
   
           }else if(bcryptjs.compareSync(password, user.passwordHash)){      // if there's a user, compare provided password  with the hashed password saved in the database
@@ -97,6 +98,8 @@ router.post('/login',(req,res,next) => {
    
 
 router.post('/logout', (req,res)=>{
+    console.log("estoy dentro de logout")
+    console.log("req.session", req.session)
     req.session.destroy();
     res.redirect('/')
 })
