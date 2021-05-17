@@ -1,9 +1,9 @@
 <nav class="nav-bar">
 	<button class="btn-nav">
-		<a class="nav-bar-link" href="/"><img src="/images/Logo (1).png" alt="" /></a>	
+		<a class="nav-bar-link" href="/"><img class="img-logo" src="/images/Logo (1).png" alt="" /></a>	
 	</button>
 </nav>
-    <div id="login">
+<div id="login">
     <form action="/login" method="POST">
     <label for="input-email">Email</label>
     <br>
@@ -15,8 +15,10 @@
     <br>
     <button class="submit" type="submit">Login</button>
     </form>
-</div>
 
 {{#if errorMessage}}
  <p class="error">{{errorMessage}}</p>
 {{/if}}
+
+</div>
+

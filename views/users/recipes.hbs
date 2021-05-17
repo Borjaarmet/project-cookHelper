@@ -1,10 +1,14 @@
 <nav class="nav-bar">
 	<button class="btn-nav">
-		<a class="nav-bar-link" href="/"><img src="/images/Logo (1).png" alt="" /></a>	
+		<a class="nav-bar-link" href="/"><img class="img-logo" src="/images/Logo (1).png" alt="" /></a>	
 	</button>
+	  <button class="btn-nav">
+    <a href="/logout">Logout</a>
+  </button>
+  
 </nav>
 <div class="list-recipes">
-{{#each recipeFounded}}
+{{#each recipesFounded}}
 
 <ul>
     <li>{{recipeName}} </li>
