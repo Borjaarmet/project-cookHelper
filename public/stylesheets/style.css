@@ -250,7 +250,7 @@ hr{
 .recipe-detail{
   position: relative;
   top:18%;
-  text-align:right;
+  text-align:left;
   
   border: 3px solid beige;
   border-radius: 10px;
