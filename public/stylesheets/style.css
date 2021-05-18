@@ -6,12 +6,21 @@ body {
   background-size: cover;
   height: 100vh;
   margin: auto;
+  font-family: fantasy;
  
 }
 a{
   text-decoration: none;
   color: beige;
 }
+button{
+  font-family: fantasy;
+}
+i{
+  color: rgb(197, 167, 112);
+  font-size: 50px;
+}
+
 
 /*   HOME PAGE   */
 
@@ -86,8 +95,8 @@ a{
   font-weight: bold;
   text-transform: uppercase;
 }
-.btn-nav form{
-  font-size: 35px;
+.btn-nav{
+  font-size: 30px;
   color: rgba(39, 36, 32, 0.9);
 }
 .nav-bar-link{
@@ -147,7 +156,9 @@ input{
   padding: 50px 0px;
   color: rgb(240, 223, 216);
   font-size: 60px;
+  line-height: 2;
 }
+
 
 /*   WELCOME PAGE   */
 
@@ -162,7 +173,12 @@ input{
   margin: 10px 75px;
   padding: 50px 0px;
   color: rgb(240, 223, 216);
-  font-size: 60px;
+  font-size: 50px;
+}
+.text-welcome{
+  padding: 30px 70px;
+  text-align: justify;
+  
 }
 
 /*   Profile page   */
@@ -221,7 +237,7 @@ input{
 
 .text-list{
   position: relative;
-  text-align: center;
+  text-align: justify;
   margin: 10px 75px;
   padding: 50px 0px;
   color: rgb(240, 223, 216);

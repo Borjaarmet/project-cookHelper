@@ -23,7 +23,8 @@ router.post('/search',(req, res, next) => {
     
     res.render('users/recipes',{recipesFounded})
   })
-  .catch(() => {
+  .catch((err) => {
+    next(err)
     res.render('users/recipes', {errorMessage:"Sorry but we haven´t found any recipe with this ingredients..."})
   })
   
@@ -47,7 +48,6 @@ router.post('/recipes/:id/details', (req,res,next) => {
   console.log('user',user)
   const {id} = req.params
   Recipe.findById(id)
-  // .populate('recipeName')
   .then((recipeSaved)=> {
     console.log('recipe', recipeSaved)
     return Recipe.create({$push:{favouriteRecipes: recipeSaved}})
