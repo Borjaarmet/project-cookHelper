@@ -19,6 +19,7 @@ const userSchema = new Schema({
         trim: true
 
     },
+    favouriteRecipes:[{type: Schema.Types.ObjectId, ref: 'Recipe'}],
     passwordHash: {
         type: String,
         required: [true, 'Password is required'],

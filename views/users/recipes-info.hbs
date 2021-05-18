@@ -23,4 +23,7 @@
     <p>{{this.Steps}}</p>
        
   {{/each}}
+  <form action="/recipes/{{_id}}/details" method="POST">
+  <button class="submit" type="submit">Add favourites</button>
+  </form>
 </div>

@@ -77,7 +77,8 @@ a{
   float: right;
 }
 .btn-nav{
-  padding:0px 30px;
+  padding:15px 30px;
+  margin-top:20px;
   margin-right: 20px;
   background-color: white;
   border-radius: 10px;
@@ -85,8 +86,8 @@ a{
   font-weight: bold;
   text-transform: uppercase;
 }
-.btn-nav a{
-  font-size: 25px;
+.btn-nav form{
+  font-size: 35px;
   color: rgba(39, 36, 32, 0.9);
 }
 .nav-bar-link{
@@ -188,6 +189,7 @@ input{
 /*    SEARCH PAGE   */
 
 .form-search{
+  display: flex;
   position: relative;
   top:18%;
   text-align: center;
@@ -195,9 +197,14 @@ input{
   border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 75px;
-  padding: 50px 0px;
+  padding: 50px 30px;
   color: rgb(240, 223, 216);
   font-size: 60px;
+}
+ .label-search{
+  text-transform: uppercase;
+  font-weight: 900;
+  text-decoration: underline;
 }
 .input-search{
   width: 50px;
@@ -207,6 +214,14 @@ input{
 
 /*    RECIPES PAGE   */
 
+.text-list{
+  position: relative;
+  text-align: center;
+  margin: 10px 75px;
+  padding: 50px 0px;
+  color: rgb(240, 223, 216);
+  font-size: 30px;
+}
 .list-recipes{
   position: relative;
   top:18%;

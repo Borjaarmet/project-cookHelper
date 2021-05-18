@@ -21,11 +21,16 @@
         <label htmlFor="email">Email</label>
         <br>
         <input type="text" name="email" id="email" value="{{userInSession.email}}">
-        <br>     
+        <br> 
+        <label htmlFor="favouriteRecipes">Favourite recipes</label>
+        <br>
+        <input type="text" name="favouriteRecipes" id="favouriteRecipes" value="{{userInSession.favouriteRecipes}}">    
         <button class="submit" type="submit">Save Changes</button>
         <br>
     </form>
-
+    <button class="submit">
+<a href="/favourites">See your favourites</a>
+</button>
 </div>
 
 
