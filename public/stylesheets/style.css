@@ -77,10 +77,10 @@ i{
   display: flex;
   justify-content: space-between;
   margin: 0px;
-  padding: 30px;
+  padding: 20px;
   background-color: rgba(39, 36, 32, 0.9);
   color: white;
-  font-size: 40px;
+  font-size: 25px;
 }
 .nav-bar-link{
   float: right;
@@ -105,7 +105,7 @@ i{
 }
 .img-logo{
   width: 300px;
-  height: 100px;
+  height: 80px;
 }
 #signup{
   position: relative;
@@ -180,6 +180,9 @@ input{
   text-align: justify;
   
 }
+.title-welcome{
+  padding:20px 20px;
+}
 
 /*   Profile page   */
 
@@ -251,7 +254,7 @@ input{
   border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 75px;
-  padding: 50px 0px;
+  padding: 50px 25px;
   color: rgb(240, 223, 216);
   font-size: 60px;
   

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const recipeModel = require('./recipe-model');
 
 const{Schema, model} = mongoose;
 
@@ -19,7 +20,8 @@ const userSchema = new Schema({
         trim: true
 
     },
-    favouriteRecipes:[String],
+    // eslint-disable-next-line no-underscore-dangle
+    favouriteRecipes:[{ type: Schema.Types.ObjectId, ref: 'Recipe'}],
     passwordHash: {
         type: String,
         required: [true, 'Password is required'],

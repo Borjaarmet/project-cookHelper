@@ -44,22 +44,33 @@ router.get('/recipes/:id/details', (req,res,next) => {
 
 router.post('/recipes/:id/details', (req,res,next) => {
   
-  const user = req.session.currentUser;
-  console.log('user',user)
+   const user = req.session.currentUser;
+  // console.log('user',user)
   const {id} = req.params
-  Recipe.findById(id)
-  .then((recipeSaved)=> {
-    console.log('recipe', recipeSaved)
-    return Recipe.create({$push:{favouriteRecipes: recipeSaved}})
+  // eslint-disable-next-line no-underscore-dangle
+  User.findById(user._id)
+  .then((user)=> {
+    user.favouriteRecipes.push(id)
+    return user.save()
   })
-  .then(()=> res.redirect('/profile'))
+  .then(()=> res.redirect('/welcome'))
   .catch((err) => {
     next(err)
   })
 });
 
 router.get('/favourites', (req,res) => {
-  res.render('users/favourites')
+  const user = req.session.currentUser
+  console.log('user', user)
+  const {id} = req.params
+  // eslint-disable-next-line no-underscore-dangle
+  Recipe.findById(user.favouriteRecipes)
+ 
+  .then((favouriteRecipes)=> {
+    console.log('lista de id recetas',user.favouriteRecipes)
+    res.render('/favourites', {favouriteRecipes})
+  })
+  
 })
 
 

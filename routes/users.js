@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const express = require('express');
-const bcryptjs = require('bcryptjs');
+// const bcryptjs = require('bcryptjs');
 
-const saltRounds = 10;
+// const saltRounds = 10;
 const User = require('../models/user-model');
 
 const router = express.Router();

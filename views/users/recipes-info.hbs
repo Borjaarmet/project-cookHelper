@@ -8,11 +8,11 @@
   
 </nav>
 <div class="recipe-detail">
- {{#each recipe}}
+ 
   
-    <h1>{{recipeName}}</h1>
-    <h3>{{difficulty}}</h3>
-    <h3>{{TimeToCook}}</h3> 
+    <h1>{{recipe.recipeName}}</h1>
+    <h3> Difficulty: {{recipe.difficulty}}</h3>
+    <h3>Time to cook: {{recipe.TimeToCook}}</h3> 
      
       <ul>   
         {{#each recipe.ingredientsList}}  
@@ -20,9 +20,13 @@
         {{/each}} 
       </ul> 
     
-    <p>{{this.Steps}}</p>
+    <ul>   
+        {{#each recipe.Steps}}  
+      <li class="li-details"> {{this}} </li>
+        {{/each}} 
+      </ul> 
        
-  {{/each}}
+  
   <form action="/recipes/{{recipe._id}}/details" method="POST">
   <button class="submit" type="submit">Add favourites</button>
   </form>
