@@ -43,17 +43,16 @@ router.get('/recipes/:id/details', (req,res,next) => {
 
 router.post('/recipes/:id/details', (req,res,next) => {
   
-  const {recipeName,difficulty,timeToCook,ingredientsList,Steps} = req.body;
-  console.log('req.body',recipeName,difficulty,timeToCook,ingredientsList,Steps)
   const user = req.session.currentUser;
   console.log('user',user)
   const {id} = req.params
   Recipe.findById(id)
-  .populate('recipeName')
-  .then((recipe)=> {
-    console.log('recipe', recipe)
-    res.render('users/favourites', {recipe})
+  // .populate('recipeName')
+  .then((recipeSaved)=> {
+    console.log('recipe', recipeSaved)
+    return Recipe.create({$push:{favouriteRecipes: recipeSaved}})
   })
+  .then(()=> res.redirect('/profile'))
   .catch((err) => {
     next(err)
   })

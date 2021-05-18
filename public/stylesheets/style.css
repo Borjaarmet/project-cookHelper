@@ -189,10 +189,9 @@ input{
 /*    SEARCH PAGE   */
 
 .form-search{
-  display: flex;
   position: relative;
   top:18%;
-  text-align: center;
+  text-align: left;
   border: 3px solid beige;
   border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
@@ -201,16 +200,22 @@ input{
   color: rgb(240, 223, 216);
   font-size: 60px;
 }
- .label-search{
+ label.label-search{
   text-transform: uppercase;
   font-weight: 900;
-  text-decoration: underline;
+  margin-bottom: 80px;
+  
 }
 .input-search{
-  width: 50px;
-  height: 50px;
-  padding: 15px;
+  width: 60px;
+  height: 60px;
 }
+.box-ingredients{
+  border: 1px solid beige;
+  text-align: left;
+  padding: 30px;
+}
+
 
 /*    RECIPES PAGE   */
 
