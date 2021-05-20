@@ -15,7 +15,6 @@ router.get('/welcome',(req, res) => {
 
 router.get('/profile/edit',(req, res) => {
   const user = req.session.currentUser;
-  console.log(user)
   res.render('users/profile', { userInSession: req.session.currentUser })
 });
 

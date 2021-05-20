@@ -313,6 +313,20 @@ select{
   list-style-type: circle;
 }
 
+/*   FAVOURITE PAGE   */
+
+.favourites{
+  position: relative;
+  top:18%;
+  text-align:left;
+  border: 3px solid beige;
+  border-radius: 10px;
+  background-color: rgba(39, 36, 32, 0.9);
+  margin: 10px 35px;
+  padding: 50px 30px;
+  color: rgb(240, 223, 216);
+  font-size: 40px;
+}
 
 .error{ 
   position:absolute;

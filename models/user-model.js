@@ -20,6 +20,10 @@ const userSchema = new Schema({
         trim: true
 
     },
+    nationality: {type:String},
+    age: {type: Number},
+    cookLevel: {type:String},
+
     // eslint-disable-next-line no-underscore-dangle
     favouriteRecipes:[{ type: Schema.Types.ObjectId, ref: 'Recipe'}],
     passwordHash: {
