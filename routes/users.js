@@ -26,7 +26,7 @@ router.post('/profile/edit', (req, res, next) => {
   // console.log("the user is: ", req.session.currentUser);
   console.log("the id is: ", _id);
   console.log('data', username, email,nationality,age,cookLevel)
-
+  console.log('cooklevel: ', cookLevel)
   User.findByIdAndUpdate( _id, {username, email,nationality,age,cookLevel}, {new:true})
   .then((updateUser)=> {
     console.log("the updated user is: ",updateUser)

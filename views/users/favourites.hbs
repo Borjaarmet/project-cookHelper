@@ -1,8 +1,14 @@
 <h1>favourites</h1>
 <div class="favourites">
+   
 {{#each favourites}}
+ <ul>
  <li>{{this.recipeName}}</li>
-
+ <button class="btn-details">
+    		<a  href="/recipes/{{_id}}/details">Details</a>
+</button>
+</ul>
 {{/each}}
+
 </div>
 
