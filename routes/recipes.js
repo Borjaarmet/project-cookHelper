@@ -62,19 +62,11 @@ router.post('/recipes/:id/details', (req,res,next) => {
 router.get('/favourites', (req,res,next) => {
   const user = req.session.currentUser
   // eslint-disable-next-line no-underscore-dangle
-  User.findById(user)// .populate('favouriteRecipes')
+  User.findById(user)
+  .populate('favouriteRecipes')
   .then((userFounded)=> {
     console.log('user founded',userFounded)
-    console.log('user founded favourite recipes',userFounded.favouriteRecipes)
-    // eslint-disable-next-line no-shadow
-    userFounded.favouriteRecipes.forEach((recipe)=> {
-     console.log('recipe', recipe)
-     Recipe.findById(recipe)
-     .then((recipesFounded)=> {
-       console.log('recipe founded: ', recipesFounded)
-      res.render('users/favourites',{recipesFounded})
-     })
-    })
+    res.render('users/favourites', {favourites: userFounded.favouriteRecipes})
   })
   .catch((err)=> {
     console.log('error in the view favourite', err)

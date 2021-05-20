@@ -1,9 +1,9 @@
 body {
   display: flexbox;
-  background-image: url('/images/background-cook4.jpeg');
-  background-position: center;
+  background-image: url('/images/background-cook7.jpeg');
+  background-position:right;
   background-repeat:repeat-y;
-  background-size: cover;
+  background-size:cover;
   height: 100vh;
   margin: auto;
   font-family: fantasy;
@@ -21,7 +21,19 @@ i{
   color: rgb(197, 167, 112);
   font-size: 50px;
 }
-
+.footer{
+  position: relative;
+  top: 43%;
+  background-color: rgba(39, 36, 32, 0.9);
+  padding:12px;
+  text-align: center;
+}
+footer p{
+  color: white;
+}
+footer a{
+  color: rgb(197, 167, 112);
+}
 
 /*   HOME PAGE   */
 
@@ -255,10 +267,14 @@ input{
   color: rgb(240, 223, 216);
   font-size: 60px;
 }
+.title-search{
+  font-size: 30px;
+}
  label.label-search{
   text-transform: uppercase;
   font-weight: 900;
   margin-bottom: 80px;
+  color: rgb(197, 167, 112);
   
 }
 .input-search{

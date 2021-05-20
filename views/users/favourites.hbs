@@ -1,12 +1,8 @@
 <h1>favourites</h1>
 <div class="favourites">
+{{#each favourites}}
+ <li>{{this.recipeName}}</li>
 
-<h1><a href="/recipes/{{_id}}/details">{{recipesFounded.recipeName}}</a></h1>
-
-<h1>{{recipeFounded.TimeToCook}}</h1>
-<h1>{{recipesFounded.recipeName}}</h1>
-<h1>{{recipesFounded.difficulty}}</h1>
-<h1>{{this.Steps}}</h1>
-<h1>{{this.recipeFounded.ingredientsList}}</h1>
+{{/each}}
 </div>
 
