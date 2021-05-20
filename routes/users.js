@@ -21,13 +21,13 @@ router.get('/profile/edit',(req, res) => {
 router.post('/profile/edit', (req, res, next) => {
   
   const { _id}= req.session.currentUser;
-  const {username, email}= req.body;
+  const {username, email,nationality,age,cookLevel}= req.body;
   
   // console.log("the user is: ", req.session.currentUser);
   console.log("the id is: ", _id);
-  console.log('data', username, email)
+  console.log('data', username, email,nationality,age,cookLevel)
 
-  User.findByIdAndUpdate( _id, {username, email}, {new:true})
+  User.findByIdAndUpdate( _id, {username, email,nationality,age,cookLevel}, {new:true})
   .then((updateUser)=> {
     console.log("the updated user is: ",updateUser)
     res.redirect('/welcome')
