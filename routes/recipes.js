@@ -54,7 +54,7 @@ router.post('/recipes/:id/details',checkIfUserIsLoggedIn, (req,res,next) => {
     user.favouriteRecipes.push(id)
     return user.save()
   })
-  .then(()=> res.redirect('/welcome'))
+  .then(()=> res.redirect('/favourites'))
   .catch((err) => {
     next(err)
   })

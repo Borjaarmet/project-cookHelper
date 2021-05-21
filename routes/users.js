@@ -9,6 +9,8 @@ const router = express.Router();
 
 router.get('/', (req,res) => res.render('home'))
 
+router.get('/help-page',(req,res) => res.render('users/help-page'))
+
 router.get('/welcome',checkIfUserIsLoggedIn,(req, res) => {
   res.render('users/welcome',{ userInSession: req.session.currentUser })
 });

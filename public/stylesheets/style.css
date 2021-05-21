@@ -7,7 +7,6 @@ body {
   margin: auto;
   height:100vh;
   width: auto;
-  
   font-family: fantasy;
 }
 a{
@@ -23,7 +22,6 @@ i{
 }
 input{
   font-size: 30px;
-  
   margin-bottom: 20px;
   border-radius: 10px;
   padding:5px 20px
@@ -47,7 +45,6 @@ input{
   text-shadow: 5px 10px 18px rgb(197, 167, 112);;
 }
 .img-logo{
-  
   width: 150px;
   height: 40px;
 }
@@ -105,6 +102,30 @@ footer p{
 footer a{
   color: rgb(197, 167, 112);
 }
+.btn-quest{
+  width:50px;
+  
+}
+.but-instructions{
+  position: absolute;
+  top:81%;
+  left:44%;
+  height:55px;
+  padding:0px;
+}
+/*   HELP PAGE   */
+.help-page{
+  position: relative;
+  top:20%;
+  text-align: center;
+  border: 3px solid beige;
+  border-radius: 10px;
+  background-color: rgba(39, 36, 32, 0.9);
+  margin: 10px 20px;
+  padding: 50px 0px;
+  color: rgb(240, 223, 216);
+  font-size: 30px;
+}
 
 /*   SIGNUP PAGE   */
 
@@ -152,7 +173,7 @@ footer a{
   margin: 10px 20px;
   padding: 50px 0px;
   color: rgb(240, 223, 216);
-  font-size: 60px;
+  font-size: 30px;
 }
 
 label{
@@ -185,14 +206,12 @@ label{
   border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
-  padding: 50px 0px;
+  padding: 20px 0px;
   color: rgb(240, 223, 216);
-  font-size: 60px;
+  font-size: 30px;
 }
 
-
 /*   WELCOME PAGE   */
-
 
 #welcome{
   position: relative;
@@ -207,7 +226,7 @@ label{
   font-size: 60px;
 }
 .text-welcome{
-  padding: 30px 20px;
+  padding: 0px 20px;
   text-align: justify;
   font-size: 25px;
   
@@ -364,7 +383,7 @@ hr{
   font-size: 40px;
 }
 .recipe-detail h1{
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
   text-decoration: underline;
 }
