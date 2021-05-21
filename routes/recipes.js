@@ -1,16 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const checkIfUserIsLoggedIn = require('../middlewares/auth');
 
 const Recipe= require('../models/recipe-model');
 const User = require('../models/user-model');
 
 const router = express.Router();
 
-router.get('/search',(req, res) => {
+router.get('/search',checkIfUserIsLoggedIn, (req, res) => {
   res.render('users/search')
 });
 
-router.post('/search',(req, res, next) => {
+router.post('/search',checkIfUserIsLoggedIn ,(req, res, next) => {
   const {meat1,meat2,meat3,meat4, fish1,fish2,fish3,fish4, vegetables1,vegetables2,vegetables3,vegetables4,vegetables5,vegetables6,vegetables7,vegetables8, pasta1,pasta2,pasta3,pasta4, dairy1,dairy2,dairy3,dairy4,dairy5,dairy6,dairy7,dairy8,} = req.body;
   
   if(meat1 ==='' && meat2 ==='' && meat3 ==='' && meat4 ==='' && fish1 ==='' && fish2 ==='' && fish3 ==='' && fish4 ==='' && vegetables1 === ''&& vegetables2 === ''&& vegetables3 === ''&& vegetables4 === ''&& vegetables5 === ''&& vegetables6 === ''&& vegetables7 === ''&& vegetables8 === '' && pasta1 ===''&& pasta2 ===''&& pasta3 ===''&& pasta4 ==='' && dairy1 ==='' && dairy2 ==='' && dairy3 ==='' && dairy4 ==='' && dairy5 ==='' && dairy6 ==='' && dairy7 ==='' && dairy8 ===''){
@@ -30,7 +31,7 @@ router.post('/search',(req, res, next) => {
   
 });
 
-router.get('/recipes/:id/details', (req,res,next) => {
+router.get('/recipes/:id/details',checkIfUserIsLoggedIn, (req,res,next) => {
   
   Recipe.findById(req.params.id)
   .then((recipe) => {
@@ -42,7 +43,7 @@ router.get('/recipes/:id/details', (req,res,next) => {
   })
 })
 
-router.post('/recipes/:id/details', (req,res,next) => {
+router.post('/recipes/:id/details',checkIfUserIsLoggedIn, (req,res,next) => {
   
    const user = req.session.currentUser;
   // console.log('user',user)
@@ -59,7 +60,7 @@ router.post('/recipes/:id/details', (req,res,next) => {
   })
 });
 
-router.get('/favourites', (req,res,next) => {
+router.get('/favourites',checkIfUserIsLoggedIn, (req,res,next) => {
   const user = req.session.currentUser
   // eslint-disable-next-line no-underscore-dangle
   User.findById(user)

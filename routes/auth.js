@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const express = require('express');
 const bcryptjs = require('bcryptjs');
+const checkIfUserIsLoggedIn = require('../middlewares/auth');
 
 const saltRounds = 10;
 // const flash = require('connect-flash');
@@ -96,7 +97,7 @@ router.post('/login',(req,res,next) => {
 });
    
 
-router.post('/logout', (req,res)=>{
+router.post('/logout',checkIfUserIsLoggedIn , (req,res)=>{
     console.log("estoy dentro de logout")
     console.log("req.session", req.session)
     req.session.destroy();

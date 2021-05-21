@@ -1,7 +1,7 @@
 // const mongoose = require('mongoose');
 const express = require('express');
 // const bcryptjs = require('bcryptjs');
-
+const checkIfUserIsLoggedIn = require('../middlewares/auth');
 // const saltRounds = 10;
 const User = require('../models/user-model');
 
@@ -9,16 +9,16 @@ const router = express.Router();
 
 router.get('/', (req,res) => res.render('home'))
 
-router.get('/welcome',(req, res) => {
+router.get('/welcome',checkIfUserIsLoggedIn,(req, res) => {
   res.render('users/welcome',{ userInSession: req.session.currentUser })
 });
 
-router.get('/profile/edit',(req, res) => {
+router.get('/profile/edit',checkIfUserIsLoggedIn,(req, res) => {
   const user = req.session.currentUser;
   res.render('users/profile', { userInSession: req.session.currentUser })
 });
 
-router.post('/profile/edit', (req, res, next) => {
+router.post('/profile/edit',checkIfUserIsLoggedIn, (req, res, next) => {
   
   const { _id}= req.session.currentUser;
   const {username, email,nationality,age,cookLevel}= req.body;
