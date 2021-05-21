@@ -1,12 +1,23 @@
-<h1>favourites</h1>
+<nav class="nav-bar">
+	<button class="btn-nav">
+		<a class="nav-bar-link" href="/"><img class="img-logo" src="/images/Logo (1).png" alt="" /></a>	
+	</button>
+     <form id="logout-form" action="/logout" method="POST">
+        <button type="submit" class="btn-nav">Logout</button>
+    </form>
+  
+</nav>
+
 <div class="favourites">
-   
+   <h3>You have <i class="i-favourites">{{favourites.length}}</i>  saved recipes </h3>
+   <hr>
 {{#each favourites}}
  <ul>
  <li>{{this.recipeName}}</li>
  <button class="btn-details">
     <a  href="/recipes/{{_id}}/details">Details</a>
 </button>
+<hr>
 </ul>
 {{/each}}
 

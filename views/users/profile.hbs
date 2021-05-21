@@ -16,19 +16,19 @@
     <form action="/profile/edit" method="POST">
         <label class="label-profile" htmlFor="name">Username</label>
         <br>
-        <input type="text" name="username" id="name" value="{{userInSession.username}}">
+        <input class="input-profile" type="text" name="username" id="name" value="{{userInSession.username}}">
         <br>
         <label class="label-profile" htmlFor="email">Email</label>
         <br>
-        <input type="text" name="email" id="email" value="{{userInSession.email}}">
+        <input class="input-profile" type="text" name="email" id="email" value="{{userInSession.email}}">
         <br>
-        <label class="label-profile" htmlFor="country">Nationality: {{userInSession.nationality}}</label>
+        <label class="label-profile" htmlFor="country">Nationality</label>
         <br>
-        <input type="text" name="nationality" value="{{userInSession.nationality}}">
+         <input class="input-profile" type="text" name="nationality" id="nationality" value="{{userInSession.nationality}}">
         <br>
         <label class="label-profile" htmlFor="age">Age</label>
         <br>
-        <input type="number" name="age" id="age" placeholder="Your age" value="{{userInSession.age}}">
+        <input class="input-profile" type="number" name="age" id="age" placeholder="Your age" value="{{userInSession.age}}">
         
         <label class="label-profile" htmlFor="cookLevel">Cook level</label>
         <br>
@@ -40,7 +40,7 @@
             <option value="Advanced">Advanced</option>
             <option value="I´m a chef">I´m a chef</option>
 
-        </select>
+         </select>
         
         <label class="label-profile" htmlFor="listOfFavourites">Favourite recipes</label>
         <br>

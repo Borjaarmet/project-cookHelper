@@ -8,7 +8,7 @@ const User = require('../models/user-model');
 const router = express.Router();
 
 router.get('/search',checkIfUserIsLoggedIn, (req, res) => {
-  res.render('users/search')
+  res.render('users/search',{ userInSession: req.session.currentUser })
 });
 
 router.post('/search',checkIfUserIsLoggedIn ,(req, res, next) => {
