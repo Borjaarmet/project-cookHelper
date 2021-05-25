@@ -160,6 +160,7 @@ router.post('/favourites/:id', checkIfUserIsLoggedIn, (req, res, next) => {
   User.findById(user._id)
     // eslint-disable-next-line no-shadow
     .then(user => {
+      console.log('favouriteRecipes', user.favouriteRecipes);
       user.favouriteRecipes.splice(id, 1);
       return user.save();
     })

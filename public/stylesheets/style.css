@@ -17,7 +17,7 @@ button {
   font-family: fantasy;
 }
 i {
-  color: rgb(197, 167, 112);
+  color: rgb(193, 140, 41);
   font-size: 25px;
 }
 input {
@@ -26,6 +26,9 @@ input {
   border-radius: 10px;
   padding: 5px 20px;
 }
+h3 {
+  margin: 0px;
+}
 
 /*   HOME PAGE   */
 
@@ -33,7 +36,7 @@ input {
   display: flex;
   justify-content: space-between;
   margin: 0px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   padding-left: 15px;
   background-color: rgba(39, 36, 32, 0.9);
   color: white;
@@ -53,12 +56,13 @@ input {
   left: 54%;
   height: 45px;
   padding: 0px;
+  border-radius: 40px;
 }
 .btn-nav {
   margin-top: 20px;
   margin-right: 20px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 5px 10px 18px rgb(197, 167, 112);
   font-weight: bold;
   text-transform: uppercase;
@@ -67,25 +71,26 @@ input {
 }
 .tittle {
   position: relative;
-  top: 15%;
+  top: 22%;
   text-align: center;
-  border: 3px solid beige;
-  border-radius: 10px;
+  border-radius: 50px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
-  padding: 30px 10px;
+  padding: 5px 5px;
   color: white;
-  font-size: 25px;
+  font-size: 22px;
   box-shadow: 5px 10px 18px rgb(197, 167, 112);
   text-shadow: 5px 10px 18px rgb(197, 167, 112);
+  font-family: 'Permanent Marker', cursive;
 }
 .text-signup {
   position: relative;
-  top: 15%;
+  top: 26%;
   text-align: center;
   color: white;
-  font-size: 22px;
-  margin: 0px 50px;
+  font-size: 19px;
+  margin: 0px 100px;
+  width: 50%;
 }
 .tittle-text {
   margin: 0px;
@@ -93,22 +98,12 @@ input {
 .subtittle {
   margin: 0px;
 }
-.submit-signup {
-  position: relative;
-  background-color: rgba(39, 36, 32, 0.9);
-  padding: 15px 40px;
-  border-radius: 25px;
-  font-size: 22px;
-  transition: all 0.5s;
-  background-position: center;
-  transition: background 0.2s;
-  font-weight: bold;
-}
+
 .submit-signup a {
   color: aliceblue;
 }
 .submit-signup:hover {
-  background: rgba(199, 146, 77, 0.7);
+  background: rgba(216, 140, 39, 0.7);
 }
 .submit-signup:active {
   background-color: darkgoldenrod;
@@ -117,7 +112,7 @@ input {
 }
 .footer {
   position: relative;
-  top: 25%;
+  top: 40%;
   background-color: rgba(39, 36, 32, 0.9);
   padding: 10px;
   text-align: center;
@@ -128,10 +123,11 @@ footer p {
   margin: 5px;
 }
 footer a {
-  color: rgb(197, 167, 112);
+  color: rgb(194, 137, 30);
 }
 .btn-quest {
   width: 40px;
+  border-radius: 40px;
 }
 
 /*   HELP PAGE   */
@@ -140,8 +136,6 @@ footer a {
   position: relative;
   top: 20%;
   text-align: center;
-  border: 3px solid beige;
-  border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
   padding: 50px 0px;
@@ -160,17 +154,10 @@ footer a {
   position: relative;
   top: 20%;
   text-align: center;
-  border: 3px solid beige;
-  border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
   padding: 50px 0px;
   color: rgb(240, 223, 216);
-  font-size: 30px;
-}
-
-label {
-  font-size: 50px;
 }
 ::placeholder {
   color: gray;
@@ -181,7 +168,7 @@ label {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 20px;
-  background-color: rgba(199, 146, 77, 0.7);
+  background-color: rgba(96, 218, 96, 0.7);
   color: white;
   border-radius: 10px;
   box-shadow: 5px 10px 18px rgb(197, 167, 112);
@@ -195,8 +182,6 @@ label {
   position: relative;
   top: 20%;
   text-align: center;
-  border: 3px solid beige;
-  border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
   padding: 20px 0px;
@@ -210,22 +195,21 @@ label {
   position: relative;
   top: 20%;
   text-align: center;
-  border: 3px solid beige;
-  border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
-  padding: 50px 0px;
+  padding: 20px 0px;
   color: rgb(240, 223, 216);
   font-size: 60px;
 }
 .text-welcome {
   padding: 0px 20px;
   text-align: justify;
-  font-size: 25px;
+  font-size: 22px;
 }
 .title-welcome {
-  font-size: 30px;
-  padding: 20px 20px;
+  font-size: 28px;
+  padding: 10px 20px;
+  text-decoration: underline;
 }
 
 /*   Profile page   */
@@ -234,8 +218,6 @@ label {
   position: relative;
   top: 15%;
   text-align: center;
-  border: 3px solid beige;
-  border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
   padding: 50px 20px;
@@ -278,30 +260,32 @@ select {
   position: relative;
   top: 18%;
   text-align: center;
-  border: 3px solid beige;
-  border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
   padding: 20px 20px;
   color: rgb(240, 223, 216);
 }
 .title-search {
-  font-size: 16px;
+  font-size: 26px;
+  margin-bottom: 40px;
 }
 label.label-search {
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 40px;
-  color: rgb(197, 167, 112);
+  font-size: 30px;
+  color: rgb(193, 140, 41);
+}
+label {
+  font-size: 45px;
 }
 .input-search {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 .box-ingredients {
   border: 1px solid beige;
   text-align: left;
-  padding: 30px;
+  padding: 10px 20px;
 }
 .box-ingredients label {
   font-size: 30px;
@@ -313,8 +297,7 @@ label.label-search {
 .text-list {
   position: relative;
   text-align: justify;
-  margin: 10px 20px;
-  padding: 10px 10px;
+  padding: 5px 5px;
   color: rgb(240, 223, 216);
   font-size: 18px;
 }
@@ -326,32 +309,35 @@ label.label-search {
   border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
-  padding: 50px 25px;
+  padding: 20px 25px;
   color: rgb(240, 223, 216);
-  font-size: 40px;
+  font-size: 30px;
 }
-ul {
+.box-recipes {
   padding: 0px;
+  padding: 10px 0px 20px 0px;
+  background-color: rgba(194, 137, 30, 0.7);
+  border-radius: 5px;
 }
 li {
   text-align: center;
   list-style-type: none;
-  margin: 20px 10px 10px 0px;
+  margin: 20px 10px 0px 0px;
 }
 hr {
   border-top: 1px dotted gray;
-  height: 3px;
+  height: 2px;
+  margin: 0px 15px;
 }
 .btn-details {
-  padding: 15px 40px;
+  padding: 15px 20px;
   margin-top: 25px;
   margin-bottom: 20px;
-  font-size: 20px;
-  background-color: rgba(199, 146, 77, 0.7);
+  font-size: 16px;
+  background-color: rgba(39, 36, 32, 0.9);
   color: white;
   border-radius: 10px;
   box-shadow: 5px 10px 18px rgb(197, 167, 112);
-  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -361,13 +347,11 @@ hr {
   position: relative;
   top: 18%;
   text-align: center;
-  border: 3px solid beige;
-  border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
   padding: 50px 20px 20px 5px;
   color: rgb(240, 223, 216);
-  font-size: 40px;
+  font-size: 30px;
 }
 .recipe-detail h1 {
   font-size: 35px;
@@ -377,12 +361,14 @@ hr {
 
 .li-details {
   text-align: justify;
-  margin-left: 35px;
+  margin-left: 5px;
   list-style-type: circle;
-  font-size: 30px;
+  font-size: 20px;
 }
-.title-list {
-  font-size: 35px;
+i.title-list {
+  font-size: 25px;
+  text-align: left;
+  margin-right: 50px;
 }
 .recipe-detail h3 {
   font-size: 25px;
@@ -393,29 +379,44 @@ hr {
   position: relative;
   top: 18%;
   text-align: center;
-  border: 3px solid beige;
-  border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 35px;
   padding: 50px 30px;
   color: rgb(240, 223, 216);
-  font-size: 40px;
+  font-size: 30px;
 }
-.favourites h3 {
-  font-size: 40px;
+.title-favourites {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.box-fav {
+  border: 1px solid beige;
+  padding: 10px 0px 60px 0px;
+  background-color: rgba(194, 137, 30, 0.7);
+  border-radius: 5px;
 }
 .i-favourites {
   font-size: 50px;
 }
+.recipeName {
+  margin-bottom: 20px;
+}
 .submit-delete {
+  float: right;
+  margin-right: 20px;
   background-color: rgba(232, 63, 44, 0.7);
   padding: 5px 10px;
-  font-size: xx-large;
+  border-radius: 10px;
+  font-size: large;
   color: white;
 }
-.btn-details {
+.submit-details {
+  float: left;
+  margin-left: 20px;
+  background-color: rgba(39, 36, 32, 0.9);
   padding: 5px 10px;
-  font-size: x-large;
+  border-radius: 10px;
+  font-size: large;
   color: white;
 }
 
@@ -431,12 +432,16 @@ hr {
   margin: 10px 35px;
   padding: 20px 20px;
   color: rgb(240, 223, 216);
-  font-size: 20px;
+  font-size: 18px;
 }
 .titles-help {
   color: rgb(197, 167, 112);
-  font-size: 30px;
-  text-align: left;
+  font-size: 26px;
+  text-align: center;
+}
+.link-help {
+  color: aqua;
+  text-decoration: underline;
 }
 .error {
   position: absolute;

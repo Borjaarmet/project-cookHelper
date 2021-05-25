@@ -9,19 +9,17 @@
 </nav>
 
 <div class='favourites'>
-  <h3>You have <i class='i-favourites'>{{favourites.length}}</i> saved recipes </h3>
-  <hr />
+  <h3 class='title-favourites'>You have <i class='i-favourites'>{{favourites.length}}</i> saved recipes </h3>
   {{#each favourites}}
-    <ul>
-      <li>{{this.recipeName}}</li>
-      <button class='btn-details'>
+    <ul class='box-fav'>
+      <li class='recipeName'>{{this.recipeName}}</li>
+      <button class='submit-details'>
         <a href='/recipes/{{_id}}/details'>Details</a>
       </button>
       <form action='/favourites/{{_id}}' method='POST'>
         <button class='submit-delete' type='submit'>Delete</button>
       </form>
 
-      <hr />
     </ul>
   {{/each}}
 

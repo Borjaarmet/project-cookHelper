@@ -1,104 +1,104 @@
-<nav class="nav-bar">
-	<button class="btn-nav">
-		<a class="nav-bar-link" href="/"><img class="img-logo" src="/images/Logo (1).png" alt="" /></a>	
-	</button>
-    <form id="logout-form" action="/logout" method="POST">
-        <button type="submit" class="btn-nav">Logout</button>
-    </form>
-  
+<nav class='nav-bar'>
+  <button class='btn-nav'>
+    <a class='nav-bar-link' href='/'><img class='img-logo' src='/images/Logo (1).png' alt='' /></a>
+  </button>
+  <form id='logout-form' action='/logout' method='POST'>
+    <button type='submit' class='btn-nav'>Logout</button>
+  </form>
+
 </nav>
-<div class="form-search">
-  <div class="title-search">
-  <h1>Choose your ingredients {{userInSession.username}}!</h1>
+<div class='form-search'>
+  <div>
+    <h1 class='title-search'>Choose your ingredients {{userInSession.username}}!</h1>
   </div>
-  <form action="/search" method="POST">
-      <label class="label-search" for="meat"> meat</label><br>
-    <div class="box-ingredients">
-      <input class="input-search" type="checkbox" id="meat1" name="meat1" value="pork">
-      <label for="meat1"> Pork</label><br>
-          
-      <input class="input-search" type="checkbox" id="meat2" name="meat2" value="chicken">
-      <label for="meat2"> Chicken</label><br>
-    
-      <input class="input-search" type="checkbox" id="meat3" name="meat3" value="burguer">
-      <label for="meat3"> Burguer</label><br>
-      
-      
-      <input class="input-search" type="checkbox" id="meat4" name="meat4" value="lamb">
-      <label for="meat4"> Lamb</label> <br>   
+  <form action='/search' method='POST'>
+    <label class='label-search' for='meat'> meat</label><br />
+    <div class='box-ingredients'>
+      <input class='input-search' type='checkbox' id='meat1' name='meat1' value='pork' />
+      <label for='meat1'> Pork</label><br />
+
+      <input class='input-search' type='checkbox' id='meat2' name='meat2' value='chicken' />
+      <label for='meat2'> Chicken</label><br />
+
+      <input class='input-search' type='checkbox' id='meat3' name='meat3' value='burguer' />
+      <label for='meat3'> Burguer</label><br />
+
+      <input class='input-search' type='checkbox' id='meat4' name='meat4' value='lamb' />
+      <label for='meat4'> Lamb</label>
+      <br />
     </div>
-      <br>
-    <label class="label-search" for="fish">fish</label><br>
-    <div class="box-ingredients">
-        
-        <input class="input-search" type="checkbox" id="fish1" name="fish1" value="salmon">
-        <label for="fish1"> Salmon</label><br>
-        <input class="input-search" type="checkbox" id="fish2" name="fish2" value="tuna">
-        <label for="fish2"> Tuna</label><br>
-        <input class="input-search" type="checkbox" id="fish3" name="fish3" value="seabass">
-        <label for="fish3"> Seabass</label><br>
-        <input class="input-search" type="checkbox" id="fish4" name="fish4" value="monkfish">
-        <label for="fish4"> Monkfish</label><br>
+    <br />
+    <label class='label-search' for='fish'>fish</label><br />
+    <div class='box-ingredients'>
+
+      <input class='input-search' type='checkbox' id='fish1' name='fish1' value='salmon' />
+      <label for='fish1'> Salmon</label><br />
+      <input class='input-search' type='checkbox' id='fish2' name='fish2' value='tuna' />
+      <label for='fish2'> Tuna</label><br />
+      <input class='input-search' type='checkbox' id='fish3' name='fish3' value='seabass' />
+      <label for='fish3'> Seabass</label><br />
+      <input class='input-search' type='checkbox' id='fish4' name='fish4' value='monkfish' />
+      <label for='fish4'> Monkfish</label><br />
     </div>
-      <br>
-    <label class="label-search" for="vegetables"> vegetables</label><br>
-    <div class="box-ingredients">
-      <input class="input-search" type="checkbox" id="vegetables1" name="vegetables1" value="tomatoes">
-      <label for="vegetables1">Tomatoes</label><br>
-      <input class="input-search" type="checkbox" id="vegetables2" name="vegetables2" value="peppers">
-      <label for="vegetables2"> Peppers</label><br>
-      <input class="input-search" type="checkbox" id="vegetables3" name="vegetables3" value="onions">
-      <label for="vegetables3"> Onions</label><br>
-      <input class="input-search" type="checkbox" id="vegetables4" name="vegetables4" value="cucumber">
-      <label for="vegetables4"> Cucumber</label><br>
-      <input class="input-search" type="checkbox" id="vegetables5" name="vegetables5" value="carrots">
-      <label for="vegetables5"> Carrots</label><br>
-      <input class="input-search" type="checkbox" id="vegetables6" name="vegetables6" value="zuchini">
-      <label for="vegetables6"> Zuchini</label><br>
-      <input class="input-search" type="checkbox" id="vegetables7" name="vegetables7" value="pumpkin">
-      <label for="vegetables7"> Pumpkin</label><br>
-      <input class="input-search" type="checkbox" id="vegetables8" name="vegetables8" value="avocados">
-      <label for="vegetables8"> Avocados</label><br>
+    <br />
+    <label class='label-search' for='vegetables'> vegetables</label><br />
+    <div class='box-ingredients'>
+      <input class='input-search' type='checkbox' id='vegetables1' name='vegetables1' value='tomatoes' />
+      <label for='vegetables1'>Tomatoes</label><br />
+      <input class='input-search' type='checkbox' id='vegetables2' name='vegetables2' value='peppers' />
+      <label for='vegetables2'> Peppers</label><br />
+      <input class='input-search' type='checkbox' id='vegetables3' name='vegetables3' value='onions' />
+      <label for='vegetables3'> Onions</label><br />
+      <input class='input-search' type='checkbox' id='vegetables4' name='vegetables4' value='cucumber' />
+      <label for='vegetables4'> Cucumber</label><br />
+      <input class='input-search' type='checkbox' id='vegetables5' name='vegetables5' value='carrots' />
+      <label for='vegetables5'> Carrots</label><br />
+      <input class='input-search' type='checkbox' id='vegetables6' name='vegetables6' value='zuchini' />
+      <label for='vegetables6'> Zuchini</label><br />
+      <input class='input-search' type='checkbox' id='vegetables7' name='vegetables7' value='pumpkin' />
+      <label for='vegetables7'> Pumpkin</label><br />
+      <input class='input-search' type='checkbox' id='vegetables8' name='vegetables8' value='avocados' />
+      <label for='vegetables8'> Avocados</label><br />
     </div>
-      <br>
-    <label class="label-search" for="pasta"> pasta</label><br>
-    <div class="box-ingredients">
-      <input class="input-search" type="checkbox" id="pasta1" name="pasta1" value="macarroni">
-      <label for="pasta1"> Macarroni</label><br>
-      <input class="input-search" type="checkbox" id="pasta2" name="pasta2" value="spaghetti">
-      <label for="pasta2"> Spaghetti</label><br>
-      <input class="input-search" type="checkbox" id="pasta3" name="pasta3" value="ravioli">
-      <label for="pasta3"> raviolis</label><br>
-      <input class="input-search" type="checkbox" id="pasta4" name="pasta4" value="nooddles">
-      <label for="pasta4"> Nooddles</label><br>
+    <br />
+    <label class='label-search' for='pasta'> pasta</label><br />
+    <div class='box-ingredients'>
+      <input class='input-search' type='checkbox' id='pasta1' name='pasta1' value='macarroni' />
+      <label for='pasta1'> Macarroni</label><br />
+      <input class='input-search' type='checkbox' id='pasta2' name='pasta2' value='spaghetti' />
+      <label for='pasta2'> Spaghetti</label><br />
+      <input class='input-search' type='checkbox' id='pasta3' name='pasta3' value='ravioli' />
+      <label for='pasta3'> raviolis</label><br />
+      <input class='input-search' type='checkbox' id='pasta4' name='pasta4' value='nooddles' />
+      <label for='pasta4'> Nooddles</label><br />
     </div>
-      <br>
-    <br>
-   <label class="label-search" for="dairy">dairy</label><br>
-    <div class="box-ingredients">
-      <input class="input-search" type="checkbox" id="dairy1" name="dairy1" value="butter">
-      <label for="dairy1"> Butter</label><br>
-      <input class="input-search" type="checkbox" id="dairy2" name="dairy2" value="milk">
-      <label for="dairy2"> Milk</label><br>
-      <input class="input-search" type="checkbox" id="dairy3" name="dairy3" value="eggs">
-      <label for="dairy3"> Eggs</label><br>
-      <input class="input-search" type="checkbox" id="dairy4" name="dairy4" value="sour cream">
-      <label for="dairy4"> Sour cream</label><br>
-      <input class="input-search" type="checkbox" id="dairy5" name="dairy5" value="coco milk">
-      <label for="dairy5"> Coco milk</label><br>
-      <input class="input-search" type="checkbox" id="dairy6" name="dairy6" value="Emmentaler cheese">
-      <label for="dairy6"> Emmentaler cheese</label><br>
-      <input class="input-search" type="checkbox" id="dairy7" name="dairy7" value="Gouda cheese">
-      <label for="dairy7"> Gouda cheese</label><br>
-      <input class="input-search" type="checkbox" id="dairy8" name="dairy8" value="Cheddar cheese">
-      <label for="dairy8"> Cheddar cheese</label><br>
+    <br />
+    <br />
+    <label class='label-search' for='dairy'>dairy</label><br />
+    <div class='box-ingredients'>
+      <input class='input-search' type='checkbox' id='dairy1' name='dairy1' value='butter' />
+      <label for='dairy1'> Butter</label><br />
+      <input class='input-search' type='checkbox' id='dairy2' name='dairy2' value='milk' />
+      <label for='dairy2'> Milk</label><br />
+      <input class='input-search' type='checkbox' id='dairy3' name='dairy3' value='eggs' />
+      <label for='dairy3'> Eggs</label><br />
+      <input class='input-search' type='checkbox' id='dairy4' name='dairy4' value='sour cream' />
+      <label for='dairy4'> Sour cream</label><br />
+      <input class='input-search' type='checkbox' id='dairy5' name='dairy5' value='coco milk' />
+      <label for='dairy5'> Coco milk</label><br />
+      <input class='input-search' type='checkbox' id='dairy6' name='dairy6' value='Emmentaler cheese' />
+      <label for='dairy6'> Emmentaler cheese</label><br />
+      <input class='input-search' type='checkbox' id='dairy7' name='dairy7' value='Gouda cheese' />
+      <label for='dairy7'> Gouda cheese</label><br />
+      <input class='input-search' type='checkbox' id='dairy8' name='dairy8' value='Cheddar cheese' />
+      <label for='dairy8'> Cheddar cheese</label><br />
     </div>
-    <br>  
-    <button class="submit" type="submit">Search</button>
+    <br />
+    <button class='submit' type='submit'>Search</button>
   </form>
 
   {{#if errorMessage}}
- <p class="error">{{errorMessage}}</p>
-{{/if}}
+    <p class='error'>{{errorMessage}}</p>
+  {{/if}}
 
 </div>

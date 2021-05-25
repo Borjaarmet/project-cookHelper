@@ -1,49 +1,43 @@
+<nav class='nav-bar'>
+  <button class='btn-nav'>
+    <a class='nav-bar-link' href='/'><img class='img-logo' src='/images/Logo (1).png' alt='' /></a>
+  </button>
 
-<nav class="nav-bar">
-	<button class="btn-nav">
-		<a class="nav-bar-link" href="/"><img class="img-logo" src="/images/Logo (1).png" alt="" /></a>	
-	</button>
-  
-  <form id="logout-form" action="/logout" method="POST">
-        <button type="submit" class="btn-nav">Logout</button>
-    </form>
-  
+  <form id='logout-form' action='/logout' method='POST'>
+    <button type='submit' class='btn-nav'>Logout</button>
+  </form>
+
 </nav>
-<div id="welcome">
+<div id='welcome'>
   {{#if userInSession}}
 
-    <h2 class="title-welcome">Welcome {{userInSession.username}}!<i class="em em-clap" aria-role="presentation" aria-label="CLAPPING HANDS SIGN"></i> </h2>
-    <div class="text-welcome">
-      <p>Just add your ingredients choosing from a categorized list of the most popular ingredients. 
-        Check off the ingredients you have and <i><strong>CokkHelper</strong></i> instantly finds matching recipes from the most popular cooking websites!</p>
+    <h2 class='title-welcome'>Welcome
+      {{userInSession.username}}!<i class='em em-clap' aria-role='presentation' aria-label='CLAPPING HANDS SIGN'></i>
+    </h2>
+    <div class='text-welcome'>
+      <p>Just add your ingredients choosing from a categorized list of the most popular ingredients. Check off the
+        ingredients you have and
+        <i><strong>CokkHelper</strong></i>
+        instantly finds matching recipes from the most popular cooking websites!</p>
     </div>
-    <button class="submit">
-      <a href="/search">Search</a>
+    <button class='submit'>
+      <a href='/search'>Search</a>
     </button>
-    <div class="text-welcome">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Et tempora quos sint temporibus autem nulla minus optio enim ratione. Odit tempore voluptatibus perspiciatis a minima quidem facere dignissimos hic quis!</p>
+    <hr />
+    <div class='text-welcome'>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et tempora quos sint temporibus autem nulla minus
+        optio enim ratione. Odit tempore voluptatibus perspiciatis a minima quidem facere dignissimos hic quis!</p>
     </div>
-    <button class="submit">
-      <a href="/profile/edit">profile</a>
+    <button class='submit'>
+      <a href='/profile/edit'>profile</a>
     </button>
-    <div class="text-welcome">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ab blanditiis sit.
-          Officiis repudiandae eaque temporibus quo nesciunt optio inventore iusto nulla illum neque, rem, corrupti quidem voluptate? Quo, hic.</p>
+    <hr />
+    <div class='text-welcome'>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ab blanditiis sit. Officiis repudiandae
+        eaque temporibus quo nesciunt optio inventore iusto nulla illum neque, rem, corrupti quidem voluptate? Quo, hic.</p>
     </div>
-    <form id="logout-form" action="/logout" method="POST">
-        <button type="submit" class="submit">Logout</button>
+    <form id='logout-form' action='/logout' method='POST'>
+      <button type='submit' class='submit'>Logout</button>
     </form>
   {{/if}}
 </div>
-
-
-
-
-
-
-
-
-
-
-
