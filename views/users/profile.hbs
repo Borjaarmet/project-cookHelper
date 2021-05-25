@@ -8,10 +8,13 @@
 
 </nav>
 {{#if userInSession}}
-  <h2>This is your profile page {{userInSession.username}}! </h2>
+  <div class='title-profile'>
+    <h2>Welcome to your profile page <i>{{userInSession.username}}! </i> </h2>
+  </div>
 {{else}}
   <p>Still no logged in user, sorry!</p>
 {{/if}}
+
 <div class='profile-form'>
   <form action='/profile/edit' method='POST'>
     <label class='label-profile' htmlFor='name'>Username</label>
@@ -47,19 +50,18 @@
     <br />
 
     <select name='cookLevel' id='cookLevel'>
-      <option selected='' value='none'></option>
+      <option value='none'></option>
       <option value='I have no idea'>I have no idea</option>
       <option value='I defend myself'>I defend myself</option>
       <option value='Advanced'>Advanced</option>
       <option value='I´m a chef'>I´m a chef</option>
     </select>
 
-    <label class='label-profile' htmlFor='listOfFavourites'>View favourites</label>
+    <label class='label-profile' htmlFor='favourites'>Favourite recipes</label>
     <br />
     <button class='btn-fav'>
-      <a href='/favourites'>Click to see your list</a>
+      <a href='/favourites'>Click here</a>
     </button>
-    <br />
     <button class='submit' type='submit'>Save Changes</button>
 
   </form>

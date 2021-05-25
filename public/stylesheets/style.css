@@ -164,14 +164,14 @@ footer a {
   opacity: 0.3;
 }
 .submit {
-  padding: 15px 30px;
+  padding: 10px 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: rgba(96, 218, 96, 0.7);
   color: white;
   border-radius: 10px;
-  box-shadow: 5px 10px 18px rgb(197, 167, 112);
+  box-shadow: 5px 10px 18px rgb(174, 198, 141);
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -214,9 +214,17 @@ footer a {
 
 /*   Profile page   */
 
+.title-profile {
+  text-align: center;
+
+  margin: 30px 20px;
+  padding: 10px 20px;
+  color: rgb(240, 223, 216);
+  font-size: 18px;
+}
 .profile-form {
   position: relative;
-  top: 15%;
+  top: 8%;
   text-align: center;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
@@ -227,20 +235,22 @@ footer a {
 
 select {
   font-size: 25px;
-  margin-top: 25px;
-  margin-bottom: 50px;
+  margin-top: 5px;
+  margin-bottom: 20px;
   border-radius: 10px;
   padding: 5px 20px;
-  width: 88%;
+  width: 93%;
   height: 85px;
   background-color: white;
 }
 
 .btn-fav {
-  margin-top: 15px;
-  padding: 15px 15px;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  padding: 5px 15px;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 7px rgb(200, 203, 196);
 }
 .btn-fav a {
   color: rgba(39, 36, 32, 0.9);
@@ -305,8 +315,6 @@ label {
   position: relative;
   top: 18%;
   text-align: center;
-  border: 3px solid beige;
-  border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 20px;
   padding: 20px 25px;
@@ -390,7 +398,6 @@ i.title-list {
   margin-bottom: 20px;
 }
 .box-fav {
-  border: 1px solid beige;
   padding: 10px 0px 60px 0px;
   background-color: rgba(194, 137, 30, 0.7);
   border-radius: 5px;
@@ -426,7 +433,6 @@ i.title-list {
   position: relative;
   top: 14%;
   text-align: justify;
-  border: 3px solid beige;
   border-radius: 10px;
   background-color: rgba(39, 36, 32, 0.9);
   margin: 10px 35px;
