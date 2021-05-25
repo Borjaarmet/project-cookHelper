@@ -1,28 +1,31 @@
-<nav class="nav-bar">
-	<button class="btn-nav">
-		<a class="nav-bar-link" href="/"><img class="img-logo" src="/images/Logo (1).png" alt="" /></a>	
-	</button>
-	  <form id="logout-form" action="/logout" method="POST">
-        <button type="submit" class="btn-nav">Logout</button>
-    </form>
-  
+<nav class='nav-bar'>
+  <button class='btn-nav'>
+    <a class='nav-bar-link' href='/'><img class='img-logo' src='/images/Logo (1).png' alt='' /></a>
+  </button>
+  <form id='logout-form' action='/logout' method='POST'>
+    <button type='submit' class='btn-nav'>Logout</button>
+  </form>
+
 </nav>
-<div class="list-recipes">
-	<div class="text-list">
-		<h2>With the ingredients that you have entered we have 
-		found <i>{{recipesFounded.length}} recipes</i>. Click on <i>Details</i> button below to see the recipe step by step</h2>
-	</div>
-	
-			{{#each recipesFounded}}
+<div class='list-recipes'>
+  <div class='text-list'>
+    <h2>
+      We have found
+      <i>{{recipesFounded.length}} recipes</i>. Click on
+      <i>Details</i>
+      button below to see the recipe step by step</h2>
+  </div>
 
-	<ul>
-    	<li>{{recipeName}} </li>
+  {{#each recipesFounded}}
 
-		<button class="btn-details">
-    		<a  href="/recipes/{{_id}}/details">Details</a>
-		</button>
-			<hr>
-	</ul>
+    <ul>
+      <li>{{recipeName}} </li>
 
-	{{/each}}
+      <button class='btn-details'>
+        <a href='/recipes/{{_id}}/details'>Details</a>
+      </button>
+      <hr />
+    </ul>
+
+  {{/each}}
 </div>
