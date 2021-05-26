@@ -46,11 +46,11 @@
       value='{{userInSession.age}}'
     />
 
-    <label class='label-profile' htmlFor='cookLevel'>Cook level</label>
+    <label class='label-profile' htmlFor='cookLevel'>Cook level <br /> ({{userInSession.cookLevel}})</label>
     <br />
 
     <select name='cookLevel' id='cookLevel'>
-      <option value='none'></option>
+      <option value='none' selected></option>
       <option value='I have no idea'>I have no idea</option>
       <option value='I defend myself'>I defend myself</option>
       <option value='Advanced'>Advanced</option>

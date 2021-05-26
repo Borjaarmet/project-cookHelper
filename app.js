@@ -1,17 +1,15 @@
-require('dotenv').config()
-
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const flash = require('connect-flash');
-const mongoose = require('mongoose');
+
+require('dotenv').config();
 
 const app = express();
 
-require('./configs/db.config')
-
+require('./configs/db.config');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,12 +29,12 @@ const users = require('./routes/users');
 const recipes = require('./routes/recipes');
 const authRouter = require('./routes/auth');
 
-app.use('/', users)
+app.use('/', users);
 app.use('/', recipes);
-app.use('/',authRouter)
+app.use('/', authRouter);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) =>{
+app.use((req, res, next) => {
   next(createError(404));
 });
 

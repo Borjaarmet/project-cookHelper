@@ -11,6 +11,7 @@ const app = require('../app');
  * Get port from environment and store in Express.
  */
 
+// eslint-disable-next-line no-use-before-define
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
@@ -18,7 +19,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
- const server = http.createServer(app);
+const server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -33,7 +34,7 @@ server.on('listening', onListening);
  */
 
 function normalizePort(val) {
- const port = parseInt(val, 10);
+  const port = parseInt(val, 10);
 
   if (Number.isNaN(port)) {
     // named pipe
@@ -57,9 +58,7 @@ function onError(error) {
     throw error;
   }
 
-  const bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+  const bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
@@ -82,9 +81,7 @@ function onError(error) {
 
 function onListening() {
   const addr = server.address();
-  const bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-    console.log('Listening on port: ',process.env.PORT || '3000')
+  const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
+  console.log('Listening on port: ', process.env.PORT || '3000');
   debug('Listening on ' + bind);
 }
