@@ -1,25 +1,23 @@
-<nav class="nav-bar">
-	<button class="btn-nav">
-		<a class="nav-bar-link" href="/"><img class="img-logo" src="/images/Logo (1).png" alt="" /></a>	
-	</button>
+<nav class='nav-bar'>
+  <button class='btn-logo'>
+    <a class='nav-bar-link' href='/'><img class='img-logo' src='/images/Logo (1).png' alt='' /></a>
+  </button>
 </nav>
-<div id="login">
-    <form action="/login" method="POST">
-    <label class="label-profile" for="input-email">Email</label>
-    <br>
-    <input class="input-profile" type="text" name="email" id="input-email" placeholder="Your email">
-    <br>
-    <label class="label-profile" for="input-password">Password</label>
-    <br>
-    <input class="input-profile" type="password" name="password" id="input-password" placeholder="******">
-    
-    
-    <button class="submit" type="submit">Let´s cook!</button>
-    </form>
+<div id='login'>
+  <form action='/login' method='POST'>
+    <label class='label-profile' for='input-email'>Email</label>
+    <br />
+    <input class='input-profile' type='text' name='email' id='input-email' placeholder='Your email' />
+    <br />
+    <label class='label-profile' for='input-password'>Password</label>
+    <br />
+    <input class='input-profile' type='password' name='password' id='input-password' placeholder='******' />
 
-{{#if errorMessage}}
- <p class="error">{{errorMessage}}</p>
-{{/if}}
+    <button class='submit' type='submit'>Let´s cook!</button>
+  </form>
+
+  {{#if errorMessage}}
+    <p class='error'>{{errorMessage}}</p>
+  {{/if}}
 
 </div>
-

@@ -145,6 +145,7 @@ router.get('/favourites', checkIfUserIsLoggedIn, (req, res, next) => {
   const user = req.session.currentUser;
   User.findById(user)
     .populate('favouriteRecipes')
+
     .then(userFounded => {
       res.render('users/favourites', { favourites: userFounded.favouriteRecipes });
     })

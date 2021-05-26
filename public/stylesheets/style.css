@@ -38,7 +38,7 @@ h3 {
   margin: 0px;
   padding-bottom: 10px;
   padding-left: 15px;
-  background-color: rgba(39, 36, 32, 0.9);
+  background-color: rgb(39, 36, 32);
   color: white;
 }
 .nav-bar-link {
@@ -50,23 +50,35 @@ h3 {
   width: 130px;
   height: 35px;
 }
+.btn-logo {
+  margin-top: 10px;
+  margin-right: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 3px 5px rgb(189, 189, 188);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  height: 45px;
+}
 .but-instructions {
   position: absolute;
-  top: 3%;
+  top: 1.8%;
   left: 54%;
   height: 45px;
   padding: 0px;
   border-radius: 40px;
+  box-shadow: 1px 3px 5px rgb(189, 189, 188);
 }
 .btn-nav {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-right: 20px;
-  background-color: white;
+  background-color: rgba(39, 36, 32, 0.9);
   border-radius: 5px;
-  box-shadow: 5px 10px 18px rgb(197, 167, 112);
+  box-shadow: 1px 3px 5px rgb(189, 189, 188);
   font-weight: bold;
   text-transform: uppercase;
-  color: rgba(39, 36, 32, 0.9);
+  color: white;
   height: 45px;
 }
 .tittle {
@@ -74,13 +86,12 @@ h3 {
   top: 22%;
   text-align: center;
   border-radius: 50px;
-  background-color: rgba(39, 36, 32, 0.9);
+  background-color: rgb(39, 36, 32);
   margin: 10px 20px;
   padding: 5px 5px;
   color: white;
   font-size: 22px;
-  box-shadow: 5px 10px 18px rgb(197, 167, 112);
-  text-shadow: 5px 10px 18px rgb(197, 167, 112);
+  text-shadow: 1px 2px 2px rgb(189, 189, 188);
   font-family: 'Permanent Marker', cursive;
 }
 .text-signup {
@@ -99,20 +110,20 @@ h3 {
   margin: 0px;
 }
 
-.submit-signup a {
+.btn-nav a {
   color: aliceblue;
 }
-.submit-signup:hover {
-  background: rgba(216, 140, 39, 0.7);
+.btn-nav:hover {
+  background: rgba(96, 218, 96, 0.7);
 }
-.submit-signup:active {
-  background-color: darkgoldenrod;
+.btn-nav:active {
+  background-color: rgba(96, 218, 96, 0.7);
   background-size: 100%;
   transition: background 0s;
 }
 .footer {
   position: relative;
-  top: 40%;
+  top: 45%;
   background-color: rgba(39, 36, 32, 0.9);
   padding: 10px;
   text-align: center;
@@ -136,7 +147,7 @@ footer a {
   position: relative;
   top: 20%;
   text-align: center;
-  background-color: rgba(39, 36, 32, 0.9);
+  background-color: rgba(39, 36, 32, 0.6);
   margin: 10px 20px;
   padding: 50px 0px;
   color: rgb(240, 223, 216);
@@ -146,17 +157,17 @@ footer a {
 /*   SIGNUP PAGE   */
 
 .nav-bar-link {
-  color: rgba(39, 36, 32, 0.9);
+  color: white;
   font-size: 20px;
 }
 
 #signup {
   position: relative;
-  top: 20%;
+  top: 15%;
   text-align: center;
-  background-color: rgba(39, 36, 32, 0.9);
-  margin: 10px 20px;
-  padding: 50px 0px;
+  background-color: rgba(39, 36, 32, 0.6);
+  margin: 0px 25px;
+  padding: 15px 0px;
   color: rgb(240, 223, 216);
 }
 ::placeholder {
@@ -180,10 +191,10 @@ footer a {
 
 #login {
   position: relative;
-  top: 20%;
+  top: 16%;
   text-align: center;
-  background-color: rgba(39, 36, 32, 0.9);
-  margin: 10px 20px;
+  background-color: rgba(39, 36, 32, 0.6);
+  margin: 10px 25px;
   padding: 20px 0px;
   color: rgb(240, 223, 216);
   font-size: 30px;
@@ -193,9 +204,9 @@ footer a {
 
 #welcome {
   position: relative;
-  top: 20%;
+  top: 16%;
   text-align: center;
-  background-color: rgba(39, 36, 32, 0.9);
+  background-color: rgba(39, 36, 32, 0.7);
   margin: 10px 20px;
   padding: 20px 0px;
   color: rgb(240, 223, 216);
@@ -205,18 +216,30 @@ footer a {
   padding: 0px 20px;
   text-align: justify;
   font-size: 22px;
+  margin: 0px;
 }
 .title-welcome {
   font-size: 28px;
   padding: 10px 20px;
   text-decoration: underline;
 }
+.submit-welcome {
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  background-color: rgba(96, 218, 96, 0.7);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 5px 10px 18px rgb(174, 198, 141);
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 /*   Profile page   */
 
 .title-profile {
   text-align: center;
-
   margin: 30px 20px;
   padding: 10px 20px;
   color: rgb(240, 223, 216);
@@ -226,7 +249,7 @@ footer a {
   position: relative;
   top: 8%;
   text-align: center;
-  background-color: rgba(39, 36, 32, 0.9);
+  background-color: rgba(39, 36, 32, 0.7);
   margin: 10px 20px;
   padding: 50px 20px;
   color: rgb(240, 223, 216);
@@ -239,14 +262,15 @@ select {
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 5px 20px;
-  width: 93%;
-  height: 85px;
+  width: 80%;
+  height: 45px;
   background-color: white;
+}
+#cookLevel {
 }
 
 .btn-fav {
   margin-top: 5px;
-  margin-bottom: 50px;
   padding: 5px 15px;
   background-color: white;
   border-radius: 5px;
@@ -257,21 +281,21 @@ select {
   font-size: 20px;
 }
 .label-profile {
-  font-size: 30px;
+  font-size: 25px;
 }
 .input-profile {
   width: 80%;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 /*    SEARCH PAGE   */
 
 .form-search {
   position: relative;
-  top: 18%;
+  top: 14%;
   text-align: center;
-  background-color: rgba(39, 36, 32, 0.9);
-  margin: 10px 20px;
+  background-color: rgba(39, 36, 32, 0.6);
+  margin: 20px 20px;
   padding: 20px 20px;
   color: rgb(240, 223, 216);
 }
@@ -298,7 +322,7 @@ label {
   padding: 10px 20px;
 }
 .box-ingredients label {
-  font-size: 30px;
+  font-size: 25px;
   margin-left: 15px;
 }
 
@@ -309,21 +333,20 @@ label {
   text-align: justify;
   padding: 5px 5px;
   color: rgb(240, 223, 216);
-  font-size: 18px;
+  font-size: 15px;
 }
 .list-recipes {
   position: relative;
-  top: 18%;
+  top: 15%;
   text-align: center;
-  background-color: rgba(39, 36, 32, 0.9);
+  background-color: rgba(39, 36, 32, 0.6);
   margin: 10px 20px;
   padding: 20px 25px;
   color: rgb(240, 223, 216);
   font-size: 30px;
 }
 .box-recipes {
-  padding: 0px;
-  padding: 10px 0px 20px 0px;
+  padding: 10px;
   background-color: rgba(194, 137, 30, 0.7);
   border-radius: 5px;
 }
@@ -348,14 +371,22 @@ hr {
   box-shadow: 5px 10px 18px rgb(197, 167, 112);
   text-transform: uppercase;
 }
+.btn-details:hover {
+  background: rgba(96, 218, 96, 0.7);
+}
+.btn-details:active {
+  background-color: rgba(96, 218, 96, 0.7);
+  background-size: 100%;
+  transition: background 0s;
+}
 
 /*   RECIPES-INFO PAGE  */
 
 .recipe-detail {
   position: relative;
-  top: 18%;
+  top: 15%;
   text-align: center;
-  background-color: rgba(39, 36, 32, 0.9);
+  background-color: rgba(39, 36, 32, 0.7);
   margin: 10px 20px;
   padding: 50px 20px 20px 5px;
   color: rgb(240, 223, 216);
@@ -381,20 +412,23 @@ i.title-list {
 .recipe-detail h3 {
   font-size: 25px;
 }
+.submit {
+  margin-top: 60px;
+}
 /*   FAVOURITE PAGE   */
 
 .favourites {
   position: relative;
-  top: 18%;
+  top: 15%;
   text-align: center;
-  background-color: rgba(39, 36, 32, 0.9);
+  background-color: rgba(39, 36, 32, 0.7);
   margin: 10px 35px;
   padding: 50px 30px;
   color: rgb(240, 223, 216);
   font-size: 30px;
 }
 .title-favourites {
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 20px;
 }
 .box-fav {
@@ -403,7 +437,7 @@ i.title-list {
   border-radius: 5px;
 }
 .i-favourites {
-  font-size: 50px;
+  font-size: 40px;
 }
 .recipeName {
   margin-bottom: 20px;
@@ -449,11 +483,14 @@ i.title-list {
   color: aqua;
   text-decoration: underline;
 }
+
+/*    ERROR MESSAGE   */
 .error {
   position: absolute;
+  bottom: 98%;
   background-color: red;
   font-weight: 900;
-  padding: 30px;
+  padding: 15px;
   z-index: 1;
-  font-size: xx-large;
+  font-size: medium;
 }
