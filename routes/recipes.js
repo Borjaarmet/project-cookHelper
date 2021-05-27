@@ -15,6 +15,8 @@ router.post('/search', checkIfUserIsLoggedIn, (req, res, next) => {
     meat2,
     meat3,
     meat4,
+    meat5,
+    meat6,
     fish1,
     fish2,
     fish3,
@@ -27,10 +29,14 @@ router.post('/search', checkIfUserIsLoggedIn, (req, res, next) => {
     vegetables6,
     vegetables7,
     vegetables8,
+    vegetables9,
+    vegetables10,
     pasta1,
     pasta2,
     pasta3,
     pasta4,
+    pasta5,
+    pasta6,
     dairy1,
     dairy2,
     dairy3,
@@ -45,6 +51,8 @@ router.post('/search', checkIfUserIsLoggedIn, (req, res, next) => {
     meat2 === '' &&
     meat3 === '' &&
     meat4 === '' &&
+    meat5 === '' &&
+    meat6 === '' &&
     fish1 === '' &&
     fish2 === '' &&
     fish3 === '' &&
@@ -57,10 +65,14 @@ router.post('/search', checkIfUserIsLoggedIn, (req, res, next) => {
     vegetables6 === '' &&
     vegetables7 === '' &&
     vegetables8 === '' &&
+    vegetables9 === '' &&
+    vegetables10 === '' &&
     pasta1 === '' &&
     pasta2 === '' &&
     pasta3 === '' &&
     pasta4 === '' &&
+    pasta5 === '' &&
+    pasta6 === '' &&
     dairy1 === '' &&
     dairy2 === '' &&
     dairy3 === '' &&
@@ -80,6 +92,8 @@ router.post('/search', checkIfUserIsLoggedIn, (req, res, next) => {
       { ingredientsList: meat2 },
       { ingredientsList: meat3 },
       { ingredientsList: meat4 },
+      { ingredientsList: meat5 },
+      { ingredientsList: meat6 },
       { ingredientsList: fish1 },
       { ingredientsList: fish2 },
       { ingredientsList: fish3 },
@@ -161,7 +175,6 @@ router.post('/favourites/:id', checkIfUserIsLoggedIn, (req, res, next) => {
   User.findById(user._id)
     // eslint-disable-next-line no-shadow
     .then(user => {
-      console.log('favouriteRecipes', user.favouriteRecipes);
       user.favouriteRecipes.splice(id, 1);
       return user.save();
     })
