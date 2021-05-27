@@ -27,7 +27,7 @@
   </ul>
   <div>
     <iframe
-      width='315'
+      width='345'
       height='400'
       src={{recipe.videoLink}}
       title='YouTube video player'
@@ -40,4 +40,9 @@
   <form action='/recipes/{{recipe._id}}/details' method='POST'>
     <button class='submit' type='submit'>Add favourites</button>
   </form>
+  {{#if errorMessage}}
+
+    <p class='error'>{{errorMessage}}</p>
+
+  {{/if}}
 </div>

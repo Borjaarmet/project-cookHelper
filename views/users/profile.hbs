@@ -63,3 +63,8 @@
 {{else}}
   <p>Still no logged in user, sorry!</p>
 {{/if}}
+{{#if errorMessage}}
+
+  <p class='error'>{{errorMessage}}</p>
+
+{{/if}}

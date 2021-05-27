@@ -82,7 +82,7 @@ router.post('/search', checkIfUserIsLoggedIn, (req, res, next) => {
     dairy7 === '' &&
     dairy8 === ''
   ) {
-    res.render('users/recipes', {
+    res.render('users/search', {
       errorMessage: 'Sorry you have to fill in at least one of the fields with an ingredient',
     });
   }
@@ -125,7 +125,7 @@ router.post('/search', checkIfUserIsLoggedIn, (req, res, next) => {
     })
     .catch(err => {
       next(err);
-      res.render('users/recipes', { errorMessage: 'Sorry but we haven´t found any recipe with this ingredients...' });
+      res.render('users/search', { errorMessage: 'Sorry but we haven´t found any recipe with this ingredients...' });
     });
 });
 
@@ -144,22 +144,17 @@ router.post('/recipes/:id/details', checkIfUserIsLoggedIn, (req, res, next) => {
   const { id } = req.params;
   // eslint-disable-next-line no-underscore-dangle
   User.findById(user._id)
+    // eslint-disable-next-line consistent-return
     // eslint-disable-next-line no-shadow
     .then(user => {
-      console.log('favouriterecipes', user.favouriteRecipes);
-      // eslint-disable-next-line no-unused-vars
-      user.favouriteRecipes.forEach(recipe => {
-        // eslint-disable-next-line no-underscore-dangle
-        if (user.favouriteRecipes.includes(id) === true) {
-          console.log(id, 'recipe is already in the list');
-          res.render('users/favourites', { errorMessage: 'Sorryyyyyyyyyyyyy' });
-        } else {
-          user.favouriteRecipes.push(id);
-          return user.save();
-        }
-      });
+      if (user.favouriteRecipes.includes(id) === true) {
+        res.redirect('/favourites');
+        return;
+      }
+      user.favouriteRecipes.push(id);
+      user.save();
+      res.redirect('/favourites');
     })
-    .then(() => res.redirect('/welcome'))
     .catch(err => {
       next(err);
     });

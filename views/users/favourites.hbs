@@ -9,8 +9,11 @@
 </nav>
 
 <div class='favourites'>
+
   <h3 class='title-favourites'>You have <i class='i-favourites'>{{favourites.length}}</i> saved recipes </h3>
+
   {{#each favourites}}
+
     <ul class='box-fav'>
       <li class='recipeName'>{{this.recipeName}}</li>
       <button class='submit-details'>
@@ -19,13 +22,13 @@
       <form action='/favourites/{{_id}}' method='POST'>
         <button class='submit-delete' type='submit'>Delete</button>
       </form>
+      {{#if errorMessage}}
 
+        <p class='error'>{{errorMessage}}</p>
+
+      {{/if}}
     </ul>
+
   {{/each}}
 
 </div>
-{{#if errorMessage}}
-
-  <p class='error'>{{errorMessage}}</p>
-
-{{/if}}
