@@ -146,10 +146,20 @@ router.post('/recipes/:id/details', checkIfUserIsLoggedIn, (req, res, next) => {
   User.findById(user._id)
     // eslint-disable-next-line no-shadow
     .then(user => {
-      user.favouriteRecipes.push(id);
-      return user.save();
+      console.log('favouriterecipes', user.favouriteRecipes);
+      // eslint-disable-next-line no-unused-vars
+      user.favouriteRecipes.forEach(recipe => {
+        // eslint-disable-next-line no-underscore-dangle
+        if (user.favouriteRecipes.includes(id) === true) {
+          console.log(id, 'recipe is already in the list');
+          res.render('users/favourites', { errorMessage: 'Sorryyyyyyyyyyyyy' });
+        } else {
+          user.favouriteRecipes.push(id);
+          return user.save();
+        }
+      });
     })
-    .then(() => res.redirect('/favourites'))
+    .then(() => res.redirect('/welcome'))
     .catch(err => {
       next(err);
     });

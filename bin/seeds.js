@@ -107,13 +107,13 @@ const recipes = [
     recipeName: 'Easy Tuna Casserole',
     difficulty: 'easy',
     TimeToCook: 40,
-    ingredientsList: ['macaroni', 'tuna', 'condensed cream', 'Cheddar cheese', 'onions'],
+    ingredientsList: ['macarroni', 'tuna', 'condensed cream', 'Cheddar cheese', 'onions'],
     Steps: [
       'Step 1:Preheat oven to 350 degrees F (175 degrees C).',
       'Step 2: In a 9x13-inch baking dish, combine the macaroni, tuna, and soup. Mix well, and then top with cheese.',
       'Step 3: Bake at 350 degrees F (175 degrees C) for about 25 minutes, or until bubbly. Sprinkle with fried onions, and bake for another 5 minutes. Serve hot.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/9FhZOMSZDrU',
   },
   {
     recipeName: 'Sesame Seared Tuna',
@@ -185,7 +185,7 @@ const recipes = [
 
       'Step 3: Bake 25 to 30 minutes, or until cheese is brown and bubbly.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/DonJQk9_OBg',
   },
   {
     recipeName: 'Easy Spaghetti Squash Spaghetti',
@@ -197,7 +197,7 @@ const recipes = [
       'Step 2: Bake in the preheated oven until easily pierced with a knife, about 40 minutes. Cool squash for 10 minutes.',
       ' Step 3: Shred the inside of the squash with a fork and transfer to a bowl. Add olive oil, salt, and pepper to shredded squash and toss to coat. Serve with Parmesan cheese.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/S5yw06NjwtQ',
   },
   {
     recipeName: 'Spaghetti carbonara',
@@ -213,7 +213,7 @@ const recipes = [
 
       'Step 4:Place spaghetti in a large bowl. Pour in olive oil, and mix well; use enough to just moisten spaghetti. Stir in bacon, eggs, and Parmesan cheese. Serve immediately.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/5t7JLjr1FxQ',
   },
   {
     recipeName: 'Easy zuchinni',
@@ -226,7 +226,7 @@ const recipes = [
       ' Step 2: Heat a grill pan over medium-high heat. Place zucchini slices, a few at a time, into hot pan and cook until the pattern of the pan is imprinted into zucchini, about 4 minutes. Turn and cook an additional 3 to 4 minutes.',
       'Step 3:Combine olive oil, vinegar, parsley, garlic, salt, and pepper in a small bowl. Brush cooked zucchini with olive oil mixture and serve.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/VoRLdhtDzzI',
   },
   {
     recipeName: 'Sesam noodles',
@@ -247,7 +247,7 @@ const recipes = [
       'Step 1:Bring a pot of lightly salted water to boil. Add pasta, and cook until al dente, about 8 to 10 minutes. Drain, and transfer to a serving bowl.',
       'Step 2:Meanwhile, place a saucepan over medium-high heat. Stir in garlic, sugar, oil, vinegar, soy sauce, sesame oil, and chili sauce. Bring to a boil, stirring constantly, until sugar dissolves. Pour sauce over linguine, and toss to coat. Garnish with green onions and sesame seeds.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/JUskq1OAJaE',
   },
   {
     recipeName: 'Peanut noodles',
@@ -273,7 +273,7 @@ const recipes = [
 
       'Step 3:Toss noodles with sauce, and serve.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/JUskq1OAJaE',
   },
   {
     recipeName: 'Seabass barbecue',
@@ -287,7 +287,7 @@ const recipes = [
 
       'Step 3:Grill the fish over medium heat for 8 to 10 minutes, flipping halfway through. Fish is done when it flakes easily with a fork.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/sQFmyIBiKlQ',
   },
   {
     recipeName: 'Baked Sea Bass with Vegetables',
@@ -303,7 +303,7 @@ const recipes = [
 
       'Step 4: Bake in the preheated oven until fish flakes easily with a fork and eggplant is tender, 35 to 40 minutes.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/Or0HoAyFQ8g',
   },
   {
     recipeName: 'Monkfish provincial',
@@ -324,7 +324,7 @@ const recipes = [
 
       ' Step 2:Heat the oil and melt the butter in a skillet over medium heat. Place the monkfish in the skillet, and cook for about 3 minutes. Mix in the garlic, tomato, and mushrooms, and continue cooking 3 minutes. Mix in the wine and parsley. Continue to cook and stir 2 minutes, or until the monkfish flakes easily with a fork.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/o4l7fgbpgVY',
   },
   {
     recipeName: 'Grilled Vegetables with Balsamic Vinegar',
@@ -348,7 +348,7 @@ const recipes = [
 
       'Step 3:Grill vegetables on preheated grill until tender, 10 to 15 minutes, brushing vegetables with marinade. Transfer cooked vegetables to a platter and serve with any remaining marinade.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/7EBBDMSgz_s',
   },
   {
     recipeName: 'Lamb Shank',
@@ -366,7 +366,7 @@ const recipes = [
 
       'Step 5:Cook lamb shank on preheated grill, basting every 15 minutes with the lemon juice mixture, until browned on the outside and red in the center, about 30 minutes per side. An instant-read thermometer inserted into the center should read 125 degrees F (52 degrees C).',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/dz-rA15Wkao',
   },
   {
     recipeName: 'Lamb Shank Braised in White Wine with Rosemary',
@@ -378,7 +378,7 @@ const recipes = [
 
       'Step 2: Reduce heat to medium-low, and add garlic to the pan; cook for 30 to 40 seconds. Stir in onion, and continue cooking until translucent, 6 to 8 minutes. Return shanks to the pan, and season with 2 teaspoons fresh rosemary and salt and pepper to taste. Pour in wine, raise heat to medium-high, and bring to a simmer. Reduce heat to low, cover tightly, and simmer until the shanks are very tender when pierced with a knife, 2 to 2 1/2 hours. Turn once or twice during cooking, and add water as necessary to maintain original level of liquid. Serve shanks garnished with rosemary sprigs.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/t01Z5hp0Z9o',
   },
   {
     recipeName: 'Carrot rice',
@@ -399,7 +399,7 @@ const recipes = [
       'Step 1:Combine rice and water in a medium saucepan. Bring to a boil over high heat. Reduce heat to low, cover with lid, and allow to steam until tender, about 20 minutes.',
       'Step 2:While rice is cooking, grind peanuts in a blender and set aside. Heat the margarine in a skillet over medium heat. Stir in the onion; cook and stir until the onion has softened and turned golden brown about 10 minutes. Stir in ginger, carrots, and salt to taste. Reduce heat to low and cover to steam 5 minutes. Stir in cayenne pepper and peanuts. When rice is done, add it to skillet and stir gently to combine with other ingredients. Garnish with chopped cilantro.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/mvaeLpbklsk',
   },
   {
     recipeName: 'Garlic quinoa',
@@ -427,7 +427,7 @@ const recipes = [
 
       'Step 3:Remove saucepan from heat and rest mixture 5 minutes before fluffing with a fork.',
     ],
-    videoLink: 'https://www.youtube.com/embed/RPGBMkN-_Ys',
+    videoLink: 'https://www.youtube.com/embed/NrCjnyzgVLw',
   },
 ];
 
