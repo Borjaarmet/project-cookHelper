@@ -89,6 +89,6 @@ function onListening() {
   const addr = server.address();
   const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
   // eslint-disable-next-line no-console
-  console.log('Listening on port: ', process.env.PORT || '3000');
+  console.log('Listening on port: ', process.env.MONGODB_URI || '3000');
   debug('Listening on ' + bind);
 }
