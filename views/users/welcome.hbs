@@ -1,0 +1,44 @@
+<nav class='nav-bar'>
+  <button class='btn-logo'>
+    <a class='nav-bar-link' href='/'><img class='img-logo' src='/images/Logo (1).png' alt='' /></a>
+  </button>
+
+  <form id='logout-form' action='/logout' method='POST'>
+    <button type='submit' class='btn-nav'>Logout</button>
+  </form>
+
+</nav>
+<div id='welcome'>
+  {{#if userInSession}}
+
+    <h2 class='title-welcome'>Welcome
+      {{userInSession.username}}!<i class='em em-clap' aria-role='presentation' aria-label='CLAPPING HANDS SIGN'></i>
+    </h2>
+    <div class='text-welcome'>
+      <p>Just add your ingredients choosing from a categorized list of the most popular ingredients. Check off the
+        ingredients you have and
+        <i><strong>CokkHelper</strong></i>
+        instantly finds matching recipes from the most popular cooking websites!</p>
+    </div>
+    <button class='submit-welcome'>
+      <a href='/search'>Search</a>
+    </button>
+    <hr />
+    <div class='text-welcome'>
+      <p>If you sign up for an account,your profile will be saved on CookHelpers servers. This means you can sign into
+        your account from any device and everything will be synced up. Having an account also allows you to “favorite”
+        recipes you like so you can easily find them later.</p>
+    </div>
+    <button class='submit-welcome'>
+      <a href='/profile/edit'>profile</a>
+    </button>
+    <hr />
+    <div class='text-welcome'>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ab blanditiis sit. Officiis repudiandae
+        eaque temporibus quo nesciunt optio inventore iusto nulla illum neque, rem, corrupti quidem voluptate? Quo, hic.</p>
+    </div>
+    <form id='logout-form' action='/logout' method='POST'>
+      <button type='submit' class='submit-welcome'>Logout</button>
+    </form>
+  {{/if}}
+</div>

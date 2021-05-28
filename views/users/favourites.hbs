@@ -1,0 +1,34 @@
+<nav class='nav-bar'>
+  <button class='btn-logo'>
+    <a class='nav-bar-link' href='/'><img class='img-logo' src='/images/Logo (1).png' alt='' /></a>
+  </button>
+  <form id='logout-form' action='/logout' method='POST'>
+    <button type='submit' class='btn-nav'>Logout</button>
+  </form>
+
+</nav>
+
+<div class='favourites'>
+
+  <h3 class='title-favourites'>You have <i class='i-favourites'>{{favourites.length}}</i> saved recipes </h3>
+
+  {{#each favourites}}
+
+    <ul class='box-fav'>
+      <li class='recipeName'>{{this.recipeName}}</li>
+      <button class='submit-details'>
+        <a href='/recipes/{{_id}}/details'>Details</a>
+      </button>
+      <form action='/favourites/{{_id}}' method='POST'>
+        <button class='submit-delete' type='submit'>Delete</button>
+      </form>
+      {{#if errorMessage}}
+
+        <p class='error'>{{errorMessage}}</p>
+
+      {{/if}}
+    </ul>
+
+  {{/each}}
+
+</div>

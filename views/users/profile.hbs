@@ -1,0 +1,70 @@
+<nav class='nav-bar'>
+  <button class='btn-logo'>
+    <a class='nav-bar-link' href='/'><img class='img-logo' src='/images/Logo (1).png' alt='' /></a>
+  </button>
+  <form id='logout-form' action='/logout' method='POST'>
+    <button type='submit' class='btn-nav'>Logout</button>
+  </form>
+
+</nav>
+{{#if userInSession}}
+  <div class='profile-form'>
+    <form action='/profile/edit' method='POST'>
+      <label class='label-profile' htmlFor='name'>Username</label>
+      <br />
+      <input class='input-profile' type='text' name='username' id='name' value='{{userInSession.username}}' />
+      <br />
+      <label class='label-profile' htmlFor='email'>Email</label>
+      <br />
+      <input class='input-profile' type='text' name='email' id='email' value='{{userInSession.email}}' />
+      <br />
+      <label class='label-profile' htmlFor='country'>Nationality</label>
+      <br />
+      <input
+        class='input-profile'
+        type='text'
+        name='nationality'
+        id='nationality'
+        value='{{userInSession.nationality}}'
+      />
+      <br />
+      <label class='label-profile' htmlFor='age'>Age</label>
+      <br />
+      <input
+        class='input-profile'
+        type='number'
+        name='age'
+        id='age'
+        placeholder='Your age'
+        value='{{userInSession.age}}'
+      />
+
+      <label class='label-profile' htmlFor='cookLevel'>Cook level <br /> <i>{{userInSession.cookLevel}}</i></label>
+      <br />
+
+      <select name='cookLevel' id='cookLevel'>
+        <option value='none' selected></option>
+        <option value='I have no idea'>I have no idea</option>
+        <option value='I defend myself'>I defend myself</option>
+        <option value='Advanced'>Advanced</option>
+        <option value='I´m a chef'>I´m a chef</option>
+      </select>
+
+      <label class='label-profile' htmlFor='favourites'>Favourite recipes</label>
+      <br />
+      <button class='btn-fav'>
+        <a href='/favourites'>Click here</a>
+      </button>
+      <button class='submit' type='submit'>Save Changes</button>
+
+    </form>
+
+  </div>
+{{else}}
+  <p>Still no logged in user, sorry!</p>
+{{/if}}
+{{#if errorMessage}}
+
+  <p class='error'>{{errorMessage}}</p>
+
+{{/if}}
